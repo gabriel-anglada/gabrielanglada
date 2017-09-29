@@ -1,0 +1,33 @@
+////
+/// @group variables
+////
+
+/// Colors palette
+///
+/// @example scss - Use function color() passing a color key defined in $colors as argument
+///    .primary-background {
+///        background-color: color(primary);
+///    }
+$colors: (
+  primary:    #1e96d7,
+  primary-one:    #1e96d7,
+  primary-two:    #192d6e,
+  primary-three:    #5a2d82,
+  secondary:    #ebaa00,
+  secondary-one:    #ebaa00,
+  secondary-two:    #c8056e,
+  danger:    #e63241,
+  success:    #00a046,
+  black:    #232323,
+  slate-grey:    #5f696e,
+  steel:    #88879c,
+  silver:    #c2c1cc,
+  pale-grey:    #f3f3f7,
+  almost-white:    #f6f6f6,
+  white:    #ffffff,
+);
+
+/// Value for standard padding
+$paddingDimension: 16px;
+/// Value for standard margin
+$marginDimension: 16px;

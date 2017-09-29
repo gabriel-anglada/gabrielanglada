@@ -1,0 +1,18 @@
+@import "../mixins_functions/color";
+@import "../mixins_functions/box_model";
+
+.bml-button {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+
+
+  &.bml-button-primary {
+    color: color(primary-two) !important;
+    height: 48px;
+    border-radius: 46px;
+    border: solid 2px color(primary-two);
+    background: transparent;
+    @include padding(0, 50px, 0, 50px);
+  }
+}

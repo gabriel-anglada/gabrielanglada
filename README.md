@@ -1,14 +1,16 @@
-# AngularSassApp
+# BML-Html5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+
+This project corresponds to the hybrid part of BML project and is based on a Angular + OnsenUI + SCSS
+
+## Installation
+
+Run `npm install` in the root folder of the project
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -22,6 +24,14 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Sass Documentation
+
+The project includes a npm dependency to generate documentation about sass classes.
+
+Run `sassdoc src/` to generate the sassdoc/ folder which includes an html project which could be rendered in the browser to see the documentation. Run this command with every documentation addition.
+
+See http://sassdoc.com for more information.
 
 ## Further help
 

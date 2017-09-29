@@ -1,0 +1,12 @@
+@import "../mixins_functions/_color.scss";
+
+.bml-modal {
+  background: color(almost-white);
+  padding: $paddingDimension;
+  * {
+    color: color(black);
+  }
+  .modal__content {
+    display: inline;
+  }
+}

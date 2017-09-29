@@ -1,0 +1,40 @@
+<div class="content" double-padding >
+  <div margin-bottom class="bml-header-account">
+    <div row class="bml-header-title" routerLink="/account-info">
+      <p col h-align-center no-margin class="white">
+        <span class="bml-icon bml-icon-info primary-two"></span>
+        Cuenta común
+      </p>
+    </div>
+    <div row half-margin-bottom class="bml-header-subtitle">
+      <p col h-align-center no-margin class="white">120.456,03€</p>
+    </div>
+    <div row class="bml-header-tags">
+      <div col h-align-center>
+        <p class="notification bml-tag bg-primary-two">ES56 3456 3465 2345 2344 <span class="bml-icon bml-icon-copy"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div margin-bottom class="bml-box">
+    <!--(click)="onSearchModalOpen()"-->
+    <h2 no-margin padding ><span class="bml-icon bml-icon-glass primary-two"></span> Buscar movimientos</h2>
+
+    <ul class="bml-list-alternate-row-color">
+      <li row *ngFor="let movement of movements">
+        <div col col-50px half-padding>
+          <p no-margin class="steel font-size-12">{{ movement.date }}</p>
+        </div>
+        <div col half-padding>
+          <p no-margin class="black">{{ movement.concept }}</p>
+        </div>
+        <div col col-70px half-padding h-align-right>
+          <p no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'">{{ movement.charge }}€</p>
+          <p no-margin class="steel font-size-10">{{ movement.global }}€</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<modal-search-moves #searchMovesModal></modal-search-moves>

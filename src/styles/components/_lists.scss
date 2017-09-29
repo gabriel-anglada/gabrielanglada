@@ -1,0 +1,23 @@
+@import "../mixins_functions/color";
+
+.bml-list-alternate-row-color {
+  ons-row {
+    &:nth-child(odd) {
+      background: color(almost-white);
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  &.attributes-list {
+    li::before {
+      content: "•";
+      color: color(primary);
+      font-size: 20px;
+      margin-right: 5px
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@import "../variables";
+@import "../mixins_functions/box_model";
+
+////
+/// @group helpers/box-model
+////
+
+/// Apply padding using {multiplicator} and {placement} where *multiplicator = [none, half, double]* and *placement = [none, top, right, bottom, left, h, v]*. Can be attribute or class
+/// @name {multiplicator}-padding-{placement}
+/// @example markup
+///   <div half-padding>Applies half padding to whole div</div>
+///   <div class="padding-h">Applies regular padding to left and right side (h = horizontal)</div>
+/// @see $paddingDimension
+[half-padding], .half-padding {
+  @include padding($paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2);
+}
+[padding], .padding {
+  @include padding($paddingDimension, $paddingDimension, $paddingDimension, $paddingDimension);
+}
+[double-padding], .double-padding {
+  @include padding($paddingDimension * 2, $paddingDimension * 2, $paddingDimension * 2, $paddingDimension * 2);
+}
+
+[half-padding-top], .half-padding-top {
+  @include padding($paddingDimension / 2, 0, 0, 0);
+}
+[padding-top], .padding-top {
+  @include padding($paddingDimension, 0, 0, 0);
+}
+[double-padding-top], .double-padding-top {
+  @include padding($paddingDimension * 2, 0, 0, 0);
+}
+
+[half-padding-right], .half-padding-right {
+  @include padding(0, $paddingDimension / 2, 0, 0);
+}
+[padding-right], .padding-right {
+  @include padding(0, $paddingDimension, 0, 0);
+}
+[double-padding-right], .double-padding-right {
+  @include padding(0, $paddingDimension * 2, 0, 0);
+}
+
+[half-padding-bottom], .half-padding-bottom {
+  @include padding(0, 0, $paddingDimension / 2, 0);
+}
+[padding-bottom], .padding-bottom {
+  @include padding(0, 0, $paddingDimension, 0);
+}
+[double-padding-bottom], .double-padding-bottom {
+  @include padding(0, 0, $paddingDimension * 2, 0);
+}
+
+[half-padding-left], .half-padding-left {
+  @include padding(0, 0, 0, $paddingDimension / 2);
+}
+[padding-left], .padding-left {
+  @include padding(0, 0, 0, $paddingDimension);
+}
+[double-padding-left], .double-padding-left {
+  @include padding(0, 0, 0, $paddingDimension * 2);
+}
+
+[half-padding-h], .half-padding-h {
+  @include padding(0, $paddingDimension / 2, 0, $paddingDimension / 2);
+}
+[padding-h], .padding-h {
+  @include padding(0, $paddingDimension / 2, 0, $paddingDimension);
+}
+[double-padding-h], .double-padding-h {
+  @include padding(0, $paddingDimension / 2, 0, $paddingDimension * 2);
+}
+
+[half-padding-v], .half-padding-v {
+  @include padding($paddingDimension / 2, 0, $paddingDimension / 2, 0);
+}
+[padding-v], .padding-v {
+  @include padding($paddingDimension, 0, $paddingDimension, 0);
+}
+[double-padding-v], .double-padding-v {
+  @include padding($paddingDimension * 2, 0, $paddingDimension * 2, 0);
+}
+
+/// Remove all element padding. Can be attribute or class
+/// @name no-padding
+/// @example markup
+///   <div no-padding>Remove padding to whole div</div>
+[no-padding], .no-padding {
+  @include padding(0, 0, 0, 0);
+}
+
+
+/// Apply margin using {multiplicator} and {placement} where *multiplicator = [none, half, double]* and *placement = [none, top, right, bottom, left, h, v]*. Can be attribute or class
+/// @name {multiplicator}-margin-{placement}
+/// @example markup
+///   <div half-margin>Applies half margin to whole div</div>
+///   <div class="margin-left">Applies regular margin to left side</div>
+/// @see $marginDimension
+[half-margin], .half-margin {
+  @include margin($marginDimension / 2, $marginDimension / 2, $marginDimension / 2, $marginDimension / 2);
+}
+[margin], .margin {
+  @include margin($marginDimension, $marginDimension, $marginDimension, $marginDimension);
+}
+[double-margin], .double-margin {
+  @include margin($marginDimension * 2, $marginDimension * 2, $marginDimension * 2, $marginDimension * 2);
+}
+
+[half-margin-top], .half-margin-top {
+  @include margin($marginDimension / 2, 0, 0, 0);
+}
+[margin-top], .margin-top {
+  @include margin($marginDimension, 0, 0, 0);
+}
+[double-margin-top], .double-margin-top {
+  @include margin($marginDimension * 2, 0, 0, 0);
+}
+
+[half-margin-right], .half-margin-right {
+  @include margin(0, $marginDimension / 2, 0, 0);
+}
+[margin-right], .margin-right {
+  @include margin(0, $marginDimension, 0, 0);
+}
+[double-margin-right], .double-margin-right {
+  @include margin(0, $marginDimension * 2, 0, 0);
+}
+
+[half-margin-bottom], .half-margin-bottom {
+  @include margin(0, 0, $marginDimension / 2, 0);
+}
+[margin-bottom], .margin-bottom {
+  @include margin(0, 0, $marginDimension, 0);
+}
+[double-margin-bottom], .double-margin-bottom {
+  @include margin(0, 0, $marginDimension * 2, 0);
+}
+
+[half-margin-left], .half-margin-left {
+  @include margin(0, 0, 0, $marginDimension / 2);
+}
+[margin-left], .margin-left {
+  @include margin(0, 0, 0, $marginDimension);
+}
+[double-margin-left], .double-margin-left {
+  @include margin(0, 0, 0, $marginDimension * 2);
+}
+
+[half-margin-h], .half-margin-h {
+  @include margin(0, $marginDimension / 2, 0, $marginDimension / 2);
+}
+[margin-h], .margin-h {
+  @include margin(0, $marginDimension / 2, 0, $marginDimension);
+}
+[double-margin-h], .double-margin-h {
+  @include margin(0, $marginDimension / 2, 0, $marginDimension * 2);
+}
+
+[half-margin-v], .half-margin-v {
+  @include margin($marginDimension / 2, 0, $marginDimension / 2, 0);
+}
+[margin-v], .margin-v {
+  @include margin($marginDimension, 0, $marginDimension, 0);
+}
+[double-margin-v], .double-margin-v {
+  @include margin($marginDimension * 2, 0, $marginDimension * 2, 0);
+}
+
+/// Remove all element padidng. Can be attribute or class
+/// @name no-margin
+/// @example markup
+///   <div no-margin>Remove margin to whole div</div>
+[no-margin], .no-margin {
+  @include margin(0, 0, 0, 0);
+}

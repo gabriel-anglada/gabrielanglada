@@ -1,0 +1,46 @@
+@import "../mixins_functions/color";
+////
+/// @group helpers/border
+////
+
+/// Apply a 1px border using border-{placement} where *placement = [none, top, right, bottom, left, h, v]*. Can be attribute or class
+/// @name border-{placement}
+/// @example markup
+///   <div border-bottom>Apply border to bottom</div>
+///   <div class="border">Apply border to whole div</div>
+[border], .border {
+  border: solid 1px;
+}
+[border-top], .border-top {
+  border-top: solid 1px;
+}
+[border-right], .border-right {
+  border-right: solid 1px;
+}
+[border-bottom], .border-bottom {
+  border-bottom: solid 1px;
+}
+[border-left], .border-left {
+  border-left: solid 1px;
+}
+[border-h], .border-h {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+[border-v], .border-v {
+  border-right: solid 1px;
+  border-left: solid 1px;
+}
+
+/// Apply border color using border-{color} where *color = [primary, secondary, danger, etc...]*. Can be attribute or class
+/// @name border-{color}
+/// @example markup
+///   <p border-top border-secondary>Hello</p>
+///   <p border-top class="border-success">World</p>
+/// @see $colors
+[border-pale-grey], .border-pale-grey {
+  border-color: color(pale-grey);
+}
+[border-black], .border-black {
+  border-color: color(black);
+}

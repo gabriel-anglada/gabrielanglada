@@ -20,7 +20,7 @@ import {FabButtonComponent} from './fab-button.component';
       <ng-content></ng-content>
     </nav>
   `,
-  //styleUrls: ['./fab.component.css']
+  styleUrls: ['./fab.component.scss']
 })
 export class FabComponent implements AfterContentInit {
 

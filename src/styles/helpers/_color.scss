@@ -1,0 +1,115 @@
+@import "../mixins_functions/color";
+
+////
+/// @group helpers/color
+////
+
+/// Apply color using {color} where *color = [primary, secondary, danger, etc...]*. Can be attribute or class
+/// @name {color}
+/// @example markup
+///   <p secondary>Hello</p>
+///   <p class="success">World</p>
+/// @see $colors
+[primary], .primary {
+  color: color(primary) !important;
+}
+[primary-one], .primary-one {
+  color: color(primary-one) !important;
+}
+[primary-two], .primary-two {
+  color: color(primary-two) !important;
+}
+[primary-three], .primary-three {
+  color: color(primary-three) !important;
+}
+[secondary], .secondary {
+  color: color(secondary) !important;
+}
+[secondary-one], .secondary-one {
+  color: color(secondary-one) !important;
+}
+[secondary-two], .secondary-two {
+  color: color(secondary-two) !important;
+}
+[danger], .danger {
+  color: color(danger) !important;
+}
+[success], .success {
+  color: color(success) !important;
+}
+[black], .black {
+  color: color(black) !important;
+}
+[slate-grey], .slate-grey {
+  color: color(slate-grey) !important;
+}
+[steel], .steel {
+  color: color(steel) !important;
+}
+[silver], .silver {
+  color: color(silver) !important;
+}
+[pale-grey], .pale-grey {
+  color: color(pale-grey) !important;
+}
+[almost-white], .almost-white {
+  color: color(almost-white) !important;
+}
+[white], .white {
+  color: color(white) !important;
+}
+
+/// Apply color using bg-{color}  where *color = [primary, secondary, danger, etc...]*. Can be attribute or class
+/// @name bg-{color}
+/// @example markup
+///   <p bg-secondary>Hello</p>
+///   <p class="bg-success">World</p>
+/// @see $colors
+[bg-primary], .bg-primary {
+  background-color: color(primary) !important;
+}
+[bg-primary-one], .bg-primary-one {
+  background-color: color(primary-one) !important;
+}
+[bg-primary-two], .bg-primary-two {
+  background-color: color(primary-two) !important;
+}
+[bg-primary-three], .bg-primary-three {
+  background-color: color(primary-three) !important;
+}
+[bg-secondary], .bg-secondary {
+  background-color: color(secondary) !important;
+}
+[bg-secondary-one], .bg-secondary-one {
+  background-color: color(secondary-one) !important;
+}
+[bg-secondary-two], .bg-secondary-two {
+  background-color: color(secondary-two) !important;
+}
+[bg-danger], .bg-danger {
+  background-color: color(danger) !important;
+}
+[bg-success], .bg-success {
+  background-color: color(success) !important;
+}
+[bg-black], .bg-black {
+  background-color: color(black) !important;
+}
+[bg-slate-grey], .bg-slate-grey {
+  background-color: color(slate-grey) !important;
+}
+[bg-steel], .bg-steel {
+  background-color: color(steel) !important;
+}
+[bg-silver], .bg-silver {
+  background-color: color(silver) !important;
+}
+[bg-pale-grey], .bg-pale-grey {
+  background-color: color(pale-grey) !important;
+}
+[bg-white], .bg-white {
+  background-color: color(white) !important;
+}
+[bg-almost-white], .bg-almost-white {
+  background-color: color(almost-white) !important;
+}

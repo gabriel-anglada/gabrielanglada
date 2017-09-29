@@ -1,0 +1,30 @@
+////
+/// @group helpers/fonts
+////
+
+/// Apply font-size using font-size-{size} where *size = [8,10,12,14,16,18,20]*. Can be attribute or class
+/// @name font-size-{size}
+/// @example markup
+///   <div font-size-8>Apply font size 8</div>
+///   <div class="font-size-16">Apply font size 16</div>
+[font-size-8], .font-size-8 {
+  font-size: 8px !important;
+}
+[font-size-10], .font-size-10 {
+  font-size: 10px !important;
+}
+[font-size-12], .font-size-12 {
+  font-size: 12px !important;
+}
+[font-size-14], .font-size-14 {
+  font-size: 14px !important;
+}
+[font-size-16], .font-size-16 {
+  font-size: 16px !important;
+}
+[font-size-18], .font-size-18 {
+  font-size: 18px !important;
+}
+[font-size-20], .font-size-20 {
+  font-size: 20px !important;
+}

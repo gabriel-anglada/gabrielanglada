@@ -1,0 +1,142 @@
+////
+/// @group helpers/position
+////
+
+[h-align-center], .h-align-center {
+  text-align: center;
+  width: 100%;
+}
+[h-align-left], .h-align-left {
+  text-align: left;
+  width: 100%;
+}
+[h-align-right], .h-align-right {
+  text-align: right;
+  width: 100%;
+}
+
+[text-center], .text-center {
+  text-align: center;
+}
+[text-left], .text-left {
+  text-align: left;
+}
+[text-right], .text-right {
+  text-align: right;
+}
+
+[float-right], .float-right {
+  float: right;
+}
+[float-left], .float-left {
+  float: left;
+}
+
+/// Apply the row/col grid system. Set columns width using col-{width} where *width = [none (fits the rest of row space), fixed widths => 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 120px, 150px, 2000px, percentage widths => 10, 20, 25, 33, 50, 66, 75 ]*. Can be attribute or class
+/// @name row/col
+/// @example markup
+///   <div row>
+///     <div col col-100px>This col has 100px width</div>
+///     <div class="col">This col fits the rest of space in row</div>
+///   </div>
+///
+///   <div class="row">
+///     <div class="col col-50px">This col has 50px width</div>
+///     <div col>This col fits the rest of space in row</div>
+///     <div col class="col-25">This col has 25% of row width</div>
+///   </div>
+/// @see $colors
+[row], .row {
+  display: -webkit-flex;
+  display: flex;
+  // The flex-direction property specifies the direction of the flexible items inside the flex container.
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  // The justify-content property horizontally aligns the flexible container's items when the items do not use all available space on the main-axis.
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  // The align-items property vertically aligns the flexible container's items when the items do not use all available space on the cross-axis.
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  // The flex-wrap property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  [col], .col {
+    width: 100%;
+    // Fixed widths
+    &[col-10px], &.col-10px {
+      flex: 0 0 10px;
+    }
+    &[col-20px], &.col-20px {
+      flex: 0 0 20px;
+    }
+    &[col-30px], &.col-30px {
+      flex: 0 0 30px;
+    }
+    &[col-40px], &.col-40px {
+      flex: 0 0 40px;
+    }
+    &[col-50px], &.col-50px {
+      flex: 0 0 50px;
+    }
+    &[col-60px], &.col-60px {
+      flex: 0 0 60px;
+    }
+    &[col-70px], &.col-70px {
+      flex: 0 0 70px;
+    }
+    &[col-80px], &.col-80px {
+      flex: 0 0 80px;
+    }
+    &[col-90px], &.col-90px {
+      flex: 0 0 90px;
+    }
+    &[col-100px], &.col-100px {
+      flex: 0 0 100px;
+    }
+    &[col-120px], &.col-120px {
+      flex: 0 0 120px;
+    }
+    &[col-150px], &.col-150px {
+      flex: 0 0 150px;
+    }
+    &[col-200px], &.col-200px {
+      flex: 0 0 200px;
+    }
+    // Percentage widths
+    &[col-10], &.col-10 {
+      flex: 0 0 10%;
+    }
+    &[col-20], &.col-20 {
+      flex: 0 0 20%;
+    }
+    &[col-25], &.col-25 {
+      flex: 0 0 25%;
+    }
+    &[col-33], &.col-33 {
+      flex: 0 0 33%;
+    }
+    &[col-50], &.col-50 {
+      flex: 0 0 50%;
+    }
+    &[col-66], &.col-66 {
+      flex: 0 0 66%;
+    }
+    &[col-75], &.col-75 {
+      flex: 0 0 75%;
+    }
+  }
+}
+
+.flex-item {
+  background-color: cornflowerblue;
+  border: solid 1px #666;
+}
+
+
+
+
+
+
+

@@ -1,6 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-ul {
-  li {
-    color: #f00;
-  }
-}
+@import '../node_modules/onsenui/css/onsenui.css';
+@import '../node_modules/onsenui/css/onsen-css-components.css';
+
+@import 'assets/fonts/bml/style.css';
+
+@import "styles/fonts";
+@import "styles/helpers/helpers";
+@import "styles/components/components";

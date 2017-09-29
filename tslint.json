@@ -82,7 +82,8 @@
     "prefer-const": true,
     "quotemark": [
       true,
-      "single"
+      "single",
+      "double"
     ],
     "radix": true,
     "semicolon": [
@@ -123,7 +124,10 @@
     "component-selector": [
       true,
       "element",
+      "modal",
+      "ons",
       "app",
+      "page",
       "kebab-case"
     ],
     "use-input-property-decorator": true,

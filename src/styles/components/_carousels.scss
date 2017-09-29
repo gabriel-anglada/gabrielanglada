@@ -1,0 +1,33 @@
+@import "../mixins_functions/box_model";
+
+////
+/// @group components/carousels
+////
+
+
+/// Based on OnsenUI carousel<br><br>
+/// <img src="https://www.bancomediolanum.es/images/quienes-somos.png">
+/// @example markup
+/// <ons-carousel class="bml-cards-carousel">
+///   <ons-carousel-item class="carousel-item current"
+///     <img src="path/to/image1">
+///   </ons-carousel-item>
+///   <ons-carousel-item class="carousel-item"
+///     <img src="path/to/image2">
+///   </ons-carousel-item>
+/// </ons-carousel>
+.bml-cards-carousel {
+  overflow: visible;
+  @include padding(0, 13%, 0, 13%);
+  .carousel-item {
+    text-align: center;
+    img {
+      transition: all .3s ease-in-out;
+    }
+    &.current {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

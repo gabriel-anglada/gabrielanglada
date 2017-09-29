@@ -1,0 +1,22 @@
+<div class="content" padding>
+  <ul>
+    <li row margin-bottom class="bml-box" *ngFor="let notification of notifications">
+      <div col col-20px center half-padding-v>
+        <span class="notification-bullet bg-danger"></span>
+      </div>
+
+      <div col half-padding-v>
+        <p half-margin-bottom>{{ notification.date }}</p>
+        <p>{{ notification.text }}</p>
+      </div>
+
+      <div col col-50px center-middle>
+        <span class="bml-icon bml-icon-trash font-size-20 silver"></span>
+      </div>
+    </li>
+  </ul>
+
+  <div row center>
+    <button (click)="onApplyFilter(modal)" class="bml-button bml-button-primary">Borrar todas</button>
+  </div>
+</div>

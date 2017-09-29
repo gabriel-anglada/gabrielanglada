@@ -1,0 +1,40 @@
+<div class="content" padding-v>
+
+  <ons-carousel #carousel swipeable auto-scroll overscrollable centered auto-scroll-ratio="0.1" class="bml-cards-carousel">
+    <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
+      <img [src]="card.image">
+    </ons-carousel-item>
+  </ons-carousel>
+
+  <div double-padding>
+    <div margin-bottom class="bml-box">
+      <div row class="border-bottom border-pale-grey">
+        <div col padding class="border-right border-pale-grey">
+          <h3 text-center no-margin class="primary">1.284€</h3>
+          <p text-center no-margin class="primary-two">gastado</p>
+        </div>
+        <div col padding>
+          <h3 text-center no-margin class="primary">2.123€</h3>
+          <p text-center no-margin class="primary-two">disponible</p>
+        </div>
+      </div>
+
+      <div row class="border-bottom border-pale-grey">
+        <p col h-align-center class="black">Límite de crédito: 3.800€</p>
+      </div>
+
+      <div row half-padding>
+        <ul col class="attributes-list">
+          <li text-left class="steel"><strong class="black">Nombre:</strong> Pau Martí García</li>
+          <li text-left class="steel"><strong class="black">Número tarjeta:</strong> 1234 5678 8765 4321</li>
+          <li text-left class="steel"><strong class="black">Balance:</strong> 3.456,34€</li>
+        </ul>
+      </div>
+    </div>
+
+    <div margin-bottom padding class="bml-box">
+      <p no-margin text-center>Últimos movimientos <span class="bml-icon bml-icon-chevron-down"></span></p>
+    </div>
+  </div>
+
+</div>

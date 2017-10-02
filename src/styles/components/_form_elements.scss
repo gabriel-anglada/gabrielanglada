@@ -1,0 +1,44 @@
+@import "../variables";
+@import "../mixins_functions/color";
+@import "../mixins_functions/texts";
+@import "../mixins_functions/box_model";
+
+////
+/// @group components/form_elements
+////
+
+/// Form elements
+.bml-form-group {
+  @include padding($paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2);
+  text-align: left;
+  position: relative;
+  label {
+    @include form-label();
+  }
+  input, select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    border-radius: 3px;
+    background-color: color(white);
+    border: solid 1px color(silver);
+    padding: 8px;
+    -webkit-appearance: none;
+    //@TODO apply correct text mixin
+    @include body-regular();
+  }
+  &.date, &.select {
+    label {
+      &::after {
+        font-family: 'bml' !important;
+        font-size: 12px;
+        content: "\e906";
+        color: color(steel);
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        pointer-events: none;
+      }
+    }
+  }
+}

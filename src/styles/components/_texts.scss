@@ -2,9 +2,6 @@
 
 body {
   @include body-regular();
-  *::not#ons-icon {
-    font-family: Montserrat !important;
-  }
 }
 
 h2 {

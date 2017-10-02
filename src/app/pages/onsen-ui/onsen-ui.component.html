@@ -76,18 +76,19 @@
         </ons-list>
       </div>
 
-      <div padding  text-center border-bottom border-black>
-        <p class="title">Select</p>
-        <ons-select [(ngModel)]="selectedModifier" [attr.modifier]="selectedModifier">
-          <option *ngFor="let modifier of modifiers" [value]="modifier.value">
-            {{ modifier.label }}
-          </option>
-        </ons-select>
-      </div>
+        <div padding  text-center border-bottom border-black>
+          <p class="title">Select</p>
+          <ons-select>
+            <option *ngFor="let modifier of modifiers" [value]="modifier.value">
+              {{ modifier.label }}
+            </option>
+          </ons-select>
+        </div>
+
 
       <div padding  text-center border-bottom border-black>
         <p class="title">Switch</p>
-        <ons-switch [(value)]="target"></ons-switch>
+        <ons-switch></ons-switch>
       </div>
     </ons-carousel-item>
 

@@ -1,0 +1,12 @@
+<div class="bml-form-group select">
+  <label>{{ label }}
+    <select (change)="onChange($event)" [value]="value">
+      <option value="" disabled>{{ placeholder }}</option>
+      <option *ngFor="let option of options" [value]="option.key">{{option.value}}</option>
+    </select>
+  </label>
+</div>
+
+
+
+

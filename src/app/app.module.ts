@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FAB_COMPONENTS} from './components/fab.component';
 import {appRoutes, MODAL_COMPONENTS, PAGE_COMPONENTS} from './app.routing';
 import {OnsenModule} from 'ngx-onsenui';
 import {RouterModule} from '@angular/router';
@@ -24,18 +24,18 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     PAGE_COMPONENTS,
     MODAL_COMPONENTS,
-    FAB_COMPONENTS,
     GlobalPositionAccountsComponent,
     GlobalPosCardsComponent
   ],
   imports: [
     // Angular core Modules
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      //{ enableTracing: true } // <-- debugging purposes only
     ),
     HttpClientModule,
     TranslateModule.forRoot({

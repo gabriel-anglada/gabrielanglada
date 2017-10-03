@@ -1,0 +1,63 @@
+#carousel {
+  margin-bottom: 15px;
+}
+ons-carousel-item img {
+  width: 85%;
+  height: auto;
+}
+.cards-opt-container{
+  position: relative;
+  background: linear-gradient(#1e96d7 0%, #1e96d7 36.81%, #f3f3f7 36.81%, #f3f3f7 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  padding: 8px 10px;
+  font-family: 'Montserrat-Regular';
+  width: 100%;
+}
+.limit {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.movimientos {
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
+}
+ul.exp-list-all {
+    list-style: none;
+    padding:0;
+    margin-top: 0;
+}
+li.exp-list {
+    padding: 9px 12px;
+}
+li.exp-list p{
+   margin: 0;
+}
+li.exp-list:nth-child(odd){
+     background-color: #f6f6f6;
+}
+li.exp-list:nth-child(even){
+     background-color: white;
+}
+.list-price {
+    float: right;
+    text-align: right;
+    color: #8887bc;
+    font-size: 16px;
+}
+.collapsible-header {
+    background-color: white;
+}
+.collapsible-header-text {
+    text-align: center;
+    color: #1e96d7;
+    padding-top: 22px;
+    font-family: 'Montserrat-Medium';
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+#collapsible-content {
+    overflow: hidden;
+}

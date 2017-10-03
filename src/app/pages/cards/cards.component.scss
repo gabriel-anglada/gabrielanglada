@@ -13,7 +13,6 @@ ons-carousel-item img {
   height: 100%;
   padding: 8px 10px;
   font-family: 'Montserrat-Regular';
-  width: 100%;
 }
 .limit {
   padding-top: 15px;
@@ -23,6 +22,7 @@ ons-carousel-item img {
     margin-top: 10px;
     background-color: white;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
+    width: 100%;
 }
 ul.exp-list-all {
     list-style: none;

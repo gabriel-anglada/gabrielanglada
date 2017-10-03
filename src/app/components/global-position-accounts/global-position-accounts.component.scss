@@ -1,0 +1,51 @@
+*{
+  box-sizing: border-box;
+}
+
+.global-accounts-card {
+    overflow: hidden;
+}
+.circle {
+    border-radius: 50%;
+    background-color: white;
+    border: solid 5px;
+    border-color: #192d6e;
+    width: 46.67%;
+    float: left;
+}
+.circle:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+.circle.second{
+  border-color: #1e96d7;
+  margin-left: 6.66%;
+}
+.circle-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 27px;
+    padding-right: 27px;
+    overflow: hidden;
+}
+.circle .circle-content {
+    font-family: 'Montserrat-Medium';
+    font-size: 20px;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 45%;
+    margin-left: 2%;
+    padding-right: 15px;
+}
+.ct1 {
+    text-align: center;
+    color: #1e96d7;
+    font-size: 20px;
+}
+.ct2 {
+    text-align: center;
+    color: #192d6e;
+}

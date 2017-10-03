@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+.top-container {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.global-pos-container {
+    position: relative;
+    background: linear-gradient(#1e96d7 0%, #1e96d7 36.81%, #f3f3f7 36.81%, #f3f3f7 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+}
+.global-title {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat-Medium';
+    font-size: 12px;
+    font-weight: 500;
+}
+.global-total {
+    margin: 0;
+    padding: 0;
+    padding-top: 1px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Montserrat-Medium';
+    font-weight: 500;
+}
+
+.global-finance {
+      display: block;
+    float: left;
+    width: 48%;
+    font-size: 10px;
+    text-align: center;
+    word-break: keep-all;
+    color: white;
+    padding: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(26,47,108);
+    border-radius: 30px;
+    animation: fadein 3s;
+    font-family: 'Montserrat-Medium';
+    font-size: 12px;
+}
+.global-invest {
+      display: block;
+    float: right;
+    width: 48%;
+    font-size: 10px;
+    word-break: keep-all;
+    text-align: center;
+    color: white;
+    background-color: rgb(90,49,128);
+    padding: 2px;
+     padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    animation: fadein 3s;
+    font-family: 'Montserrat-Medium';
+    font-size: 12px;
+}
+.global-accounts-container {
+    position: relative;
+    left: -600px;
+    top: -200px;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0.5s;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.button-container {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+.button-container .btn{
+  border: 0;
+  padding-left: 14px;
+  padding-right: 15px;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  font-size: 16px;
+  color: white;
+  width: 48%;
+  height: 48px;
+  background-color: #ebaa00;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
+  animation: fadein 3s ;
+  display: block;
+  float: left;
+  font-family: 'Montserrat-Medium';
+  font-size: 16px;
+  text-align: left;
+
+}
+.button-container .btn.secondary{
+  background-color: white;
+  float: right;
+  padding: 0;
+}
+.button-container button{
+  position: relative;
+}
+.button-arrow{
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  fill: white;
+}
+.btn-bizum{
+  width: 81px;
+  height: 24px;
+  margin-left: 13px;
+  vertical-align: middle;
+}
+
+@keyframes slide {
+    from { left: -600px; top: -200px }
+    to { left: 0; top: 0}
+}
+@keyframes fadein {
+ from { opacity: 0; }
+    to   { opacity: 1; }
+}

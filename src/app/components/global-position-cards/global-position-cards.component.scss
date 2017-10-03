@@ -1,0 +1,49 @@
+.global-cards  {
+    padding-left: 8px;
+    padding-right: 8px;
+    animation-delay: 0.7s;
+}
+.client-card {
+    margin: 0 auto;
+    border-radius: 8px;
+    background: linear-gradient(#192d6e 0%, #192d6e 50%, #ffffff 50%, #ffffff 100%);
+    height: 50px;
+    overflow: hidden;
+}
+.client-card.second {
+    background: linear-gradient(#1e96d7 0%, #1e96d7 50%, #ffffff 50%, #ffffff 100%);
+}
+.client-card .number{
+  position: relative;
+  top: 10%;
+  left: 5%;
+  color: white;
+  padding: 0;
+  margin: 0;
+  float: left;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
+  font-weight: normal;
+}
+.client-card .amount{
+  color: white;
+  padding: 3px;
+  margin: 0;
+  float: right;
+  font-family: 'Montserrat-Medium';
+  font-size: 16px;
+  margin-right: 10px;
+}
+.client-card .ball {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: -12px;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 50px;
+    background: linear-gradient(#ffffff 0px, #ffffff 5px, #192d6e 5px, #192d6e 100%);
+}
+.client-card .ball.secondary {
+    background: linear-gradient(#ffffff 0px, #ffffff 5px, #1e96d7 5px, #1e96d7 100%);
+}

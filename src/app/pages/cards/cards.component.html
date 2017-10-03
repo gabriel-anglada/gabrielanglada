@@ -1,9 +1,12 @@
 <div class="cards-opt-container" padding-v>
+  <div class="carousel-container">
   <ons-carousel id="carousel" (swipeleft)="swipeLeft()" (swiperight)="swipeRight()" #carousel swipeable auto-scroll centered class="bml-cards-carousel">
     <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
       <img [src]="card.imgSource">
     </ons-carousel-item>
   </ons-carousel>
+</div>
+
   <div class="cards-opt-container">
     <div margin-bottom class="bml-box">
       <div row class="border-bottom border-pale-grey">

@@ -33,6 +33,15 @@ Run `sassdoc src/` to generate the sassdoc/ folder which includes an html projec
 
 See http://sassdoc.com for more information.
 
+## i18n locale management
+
+The project includes a npm dependency for manage and extract translations from templates and typescript files
+
+Run `npm run extract` to extract them to a json
+
+See https://github.com/ngx-translate/core
+See https://github.com/biesbjerg/ngx-translate-extract
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

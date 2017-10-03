@@ -7,6 +7,14 @@ import {OnsenModule} from 'ngx-onsenui';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormElementsModule} from './components/form-elements/form-elements.module';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {APP_PROVIDERS} from "./providers/app.providers";
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -15,6 +23,7 @@ import {FormElementsModule} from './components/form-elements/form-elements.modul
     MODAL_COMPONENTS
   ],
   imports: [
+    // Angular core Modules
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -22,16 +31,26 @@ import {FormElementsModule} from './components/form-elements/form-elements.modul
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
     // Custom Modules
     FormElementsModule,
-    // Third Parties
+    // Third Party Modules
     OnsenModule
   ],
   entryComponents: [
     PAGE_COMPONENTS,
     MODAL_COMPONENTS
   ],
-  providers: [],
+  providers: [
+    APP_PROVIDERS
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

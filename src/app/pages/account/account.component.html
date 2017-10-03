@@ -17,7 +17,7 @@
   </div>
 
   <div margin-bottom class="bml-box">
-    <h2 no-margin padding (click)="onSearchModalOpen()"><span class="bml-icon bml-icon-glass primary-two"></span> Buscar movimientos</h2>
+    <h2 no-margin padding (click)="onSearchModalOpen()"><span class="bml-icon bml-icon-glass primary-two"></span> {{ 'page.account.button.search_movements' | translate }}</h2>
 
     <ul class="bml-list-alternate-row-color">
       <li row *ngFor="let movement of movements">

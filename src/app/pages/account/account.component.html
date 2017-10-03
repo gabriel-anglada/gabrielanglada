@@ -17,8 +17,7 @@
   </div>
 
   <div margin-bottom class="bml-box">
-    <!--(click)="onSearchModalOpen()"-->
-    <h2 no-margin padding ><span class="bml-icon bml-icon-glass primary-two"></span> Buscar movimientos</h2>
+    <h2 no-margin padding (click)="onSearchModalOpen()"><span class="bml-icon bml-icon-glass primary-two"></span> {{ 'page.account.button.search_movements' | translate }}</h2>
 
     <ul class="bml-list-alternate-row-color">
       <li row *ngFor="let movement of movements">
@@ -29,8 +28,8 @@
           <p no-margin class="black">{{ movement.concept }}</p>
         </div>
         <div col col-70px half-padding h-align-right>
-          <p no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'">{{ movement.charge }}€</p>
-          <p no-margin class="steel font-size-10">{{ movement.global }}€</p>
+          <span no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'">{{ movement.charge }}€</span>
+          <span no-margin class="steel font-size-10">{{ movement.global }}€</span>
         </div>
       </li>
     </ul>

@@ -1,17 +1,20 @@
 @import "color";
 
 @mixin body-regular() {
+  font-family: Montserrat !important;
   font-size: 14px !important;
   color: color(black);
 }
 
 @mixin body-bold() {
+  font-family: Montserrat !important;
   font-size: 14px !important;
   font-weight: 500;
   color: color(black);
 }
 
 @mixin form-label() {
+  font-family: Montserrat !important;
   font-size: 12px !important;
   line-height: 2.0;
   text-align: left;

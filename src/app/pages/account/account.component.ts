@@ -9,7 +9,7 @@ import {SearchMovesModalComponent} from '../../components/modals/search-moves/se
 })
 export class AccountPageComponent implements AfterViewInit, OnDestroy, OnInit {
 
-  private movements: Array<any>;
+  private movements: Array<any> = [];
   private _modal: any;
   private _destroyModal: Function;
 

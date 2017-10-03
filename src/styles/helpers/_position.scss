@@ -2,19 +2,6 @@
 /// @group helpers/position
 ////
 
-[h-align-center], .h-align-center {
-  text-align: center;
-  width: 100%;
-}
-[h-align-left], .h-align-left {
-  text-align: left;
-  width: 100%;
-}
-[h-align-right], .h-align-right {
-  text-align: right;
-  width: 100%;
-}
-
 [text-center], .text-center {
   text-align: center;
 }
@@ -127,6 +114,16 @@
       flex: 0 0 75%;
     }
   }
+}
+
+[h-align-left], .h-align-left {
+  text-align: left;
+}
+[h-align-center], .h-align-center {
+  text-align: center;
+}
+[h-align-right], .h-align-right {
+  text-align: right;
 }
 
 [center], .center {

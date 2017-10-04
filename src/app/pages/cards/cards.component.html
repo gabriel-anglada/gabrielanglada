@@ -1,11 +1,11 @@
 <div class="cards-opt-container" padding-v>
   <div class="carousel-container">
-  <ons-carousel id="carousel" (swipeleft)="swipeLeft()" (swiperight)="swipeRight()" #carousel swipeable auto-scroll centered class="bml-cards-carousel">
-    <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
-      <img [src]="card.imgSource">
-    </ons-carousel-item>
-  </ons-carousel>
-</div>
+    <ons-carousel id="carousel" (postchange)="userSwiped($event)" #carousel swipeable auto-scroll centered class="bml-cards-carousel">
+      <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
+        <img [src]="card.imgSource">
+      </ons-carousel-item>
+    </ons-carousel>
+  </div>
 
   <div class="cards-opt-container">
     <div margin-bottom class="bml-box">
@@ -28,52 +28,38 @@
         <ul col class="attributes-list">
           <li text-left class="steel"><strong class="black">Nombre:</strong> {{currentCard.clientName}}</li>
           <li text-left class="steel"><strong class="black">Número tarjeta:</strong> {{currentCard.cardNumber}}</li>
-          <li text-left class="steel"><strong class="black">Balance:</strong> {{currentCard.cardBalance}}</li>
+          <li text-left class="steel"><strong class="black">Balance:</strong> {{currentCard.cardBalance | currency:'EUR':true:'1.2-2'}}</li>
         </ul>
       </div>
     </div>
-    <div class="movimientos">
-            <div class="collapsible-header" (click)="desplegar()">
-                <p class="collapsible-header-text">Ùltimos movimientos
-                  <svg [@desplegado]='state' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#1e96d7" width="15" height="15" viewBox="0 0 15 15">
-                      <defs>
-                          <path id="a" d="M7.5 11.02l-.195.194-7.52-7.52 1.481-1.48L7.5 8.448l6.234-6.234 1.48 1.48-7.52 7.52-.194-.194z"/>
-                      </defs>
-                      <use fill-rule="evenodd" transform="rotate(180 7.5 6.714)" xlink:href="#a"/>
-                  </svg>
-                  <!--<img src="assets/chevron-up.svg" [@desplegado]='state'>-->
-                </p>
-                <!--//<span class="bml-icon bml-icon-chevron-up" [@desplegado]='state'></span>-->
-            </div>
-            <div id="collapsible-content" [@contentDeploy]='content'>
-                <ul class="exp-list-all" >
-                        <li class="exp-list">
-                            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-                            <p class="list-detail">Pull Bear <br> Arteixo</p>
-                        </li>
-                        <li class="exp-list">
-                            <p class="list-price">{{price| currency:'EUR': true:'1.2-2' }}</p>
-                            <p class="list-detail">Pull Bear <br> Arteixo</p>
-                        </li>
-                        <li class="exp-list">
-                            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-                            <p class="list-detail">Pull Bear <br> Arteixo</p>
-                        </li>
-                        <li class="exp-list">
-                            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-                            <p class="list-detail">Pull Bear <br> Arteixo</p>
-                        </li>
-                        <li class="exp-list">
-                            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-                            <p class="list-detail">Pull Bear <br> Arteixo</p>
-                        </li>
-                    </ul>
-            </div>
-        </div>
-  </div>
-<!--
-    <div margin-bottom padding class="bml-box">
-      <p no-margin text-center (click)="print()">Últimos movimientos <span class="bml-icon bml-icon-chevron-down"></span></p>
+    <div class="movements">
+      <div class="collapsible-header" (click)="desplegar()">
+        <p class="collapsible-header-text">Ùltimos movimientos <span class="bml-icon bml-icon-chevron-up movement-chevron" [@desplegado]='state'></span></p>
+      </div>
+      <div id="collapsible-content" [@contentDeploy]='content'>
+        <ul class="exp-list-all" >
+          <li class="exp-list">
+            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            <p class="list-detail">Pull Bear <br> Arteixo</p>
+          </li>
+          <li class="exp-list">
+            <p class="list-price">{{price| currency:'EUR': true:'1.2-2' }}</p>
+            <p class="list-detail">Pull Bear <br> Arteixo</p>
+          </li>
+          <li class="exp-list">
+            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            <p class="list-detail">Pull Bear <br> Arteixo</p>
+          </li>
+          <li class="exp-list">
+            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            <p class="list-detail">Pull Bear <br> Arteixo</p>
+          </li>
+          <li class="exp-list">
+            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            <p class="list-detail">Pull Bear <br> Arteixo</p>
+          </li>
+        </ul>
+      </div>
     </div>
-  -->
   </div>
+</div>

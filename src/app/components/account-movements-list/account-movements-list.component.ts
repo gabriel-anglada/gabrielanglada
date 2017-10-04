@@ -1,13 +1,13 @@
 import { Component, Input, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'account-line',
-  templateUrl: './account-line.component.html',
-  styleUrls: ['./account-line.component.scss']
+  selector: 'account-movements-list',
+  templateUrl: './account-movements-list.component.html',
+  styleUrls: ['./account-movements-list.component.scss']
 })
 
-export class AccountLine implements AfterViewInit {
-  @Input('account') account: any;
+export class AccountMovementsList implements AfterViewInit {
+  @Input('accountMovements') accountMovements: Array<any>;
 
   constructor(){
   }

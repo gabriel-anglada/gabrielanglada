@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'component-library',
+  selector: 'ons-page[component-library]',
   templateUrl: './component-library.component.html',
   styleUrls: [
     './component-library.component.scss'

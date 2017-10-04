@@ -1,19 +1,8 @@
 @import "../../../styles/mixins_functions/color";
 
-ul.exp-list-all {
-  list-style: none;
-  padding:0;
-  margin-top: 0;
-}
 card-movement-line:nth-child(odd) {
   background-color: color(almost-white);
 }
 card-movement-line:nth-child(even) {
-  background-color: color(white);
-}
-account-line:nth-child(odd) {
-  background-color: color(almost-white);
-}
-account-line:nth-child(even) {
   background-color: color(white);
 }

@@ -32,3 +32,9 @@
     }
   }
 }
+.account-list-item:nth-child(odd) {
+    background-color: color(almost-white)!important;
+}
+.account-list-item:nth-child(even) {
+    background-color: color(white)!important;
+}

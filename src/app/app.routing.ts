@@ -13,7 +13,7 @@ import { CardBlueSoft } from './components/card-blue-soft/card-blue-soft.compone
 import { TagDarkBlue } from './components/tag-dark-blue/tag-dark-blue.component';
 import { TagPurple } from './components/tag-purple/tag-purple.component';
 import { CardMovementLine } from './components/card-movement-line/card-movement-line.component';
-import { AccountLine } from './components/account-line/account-line.component';
+import { AccountMovementsList } from './components/account-movements-list/account-movements-list.component';
 
 export const appRoutes: Routes = [
   { path: 'account', component: AccountPageComponent },
@@ -29,7 +29,7 @@ export const appRoutes: Routes = [
 ];
 
 export const PAGE_COMPONENTS = [
-  AccountLine,
+  AccountMovementsList,
   AccountPageComponent,
   AccountInfoPageComponent,
   OnsenUIPageComponent,

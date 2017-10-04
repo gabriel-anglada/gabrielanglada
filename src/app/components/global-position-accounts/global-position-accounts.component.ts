@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-global-position-accounts',
+  selector: 'global-position-accounts',
   templateUrl: './global-position-accounts.component.html',
   styleUrls: ['./global-position-accounts.component.scss']
 })

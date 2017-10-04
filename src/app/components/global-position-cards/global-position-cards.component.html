@@ -2,18 +2,16 @@
   <div class="global-pos-card-block-title">
     <p>Mis Tarjetas</p>
   </div>
-  <div class="client-card">
-    <p class="number">**** **** **** 1231</p>
-    <p class="amount">{{ tarjeta1 | currency:'EUR': true:'1.2-2'}}</p>
-    <div class="ball"></div>
-  </div>
+<card-blue
+  [cardNumber]="cardNumber"
+  [cardAmount]="cardAmount">
+</card-blue>
+<card-blue-soft
+  [cardNumber]="cardNumber"
+  [cardAmount]="cardAmount">
+</card-blue-soft>
 
-  <div class="client-card second">
-    <p class="number">**** **** **** 1231</p>
-    <p class="amount">{{ tarjeta1 | currency:'EUR': true:'1.2-2'}}</p>
-    <div class="ball secondary"></div>
-  </div>
-  <div style="width: 100%">
+<div style="width: 100%">
   <div class="dots-container">
     <div class="dot"></div>
     <div class="dot" style="opacity: 0.46"></div>

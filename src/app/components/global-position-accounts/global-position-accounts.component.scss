@@ -1,3 +1,5 @@
+@import "../../../styles/mixins_functions/color";
+
 *{
   box-sizing: border-box;
 }
@@ -7,9 +9,9 @@
 }
 .circle {
     border-radius: 50%;
-    background-color: white;
+    background-color: color(white);
     border: solid 5px;
-    border-color: #192d6e;
+    border-color: color(primary-two);
     width: 46.67%;
     float: left;
 }
@@ -19,7 +21,7 @@
     padding-top:100%;
 }
 .circle.second{
-  border-color: #1e96d7;
+  border-color: color(primary-one);
   margin-left: 6.66%;
 }
 .circle-container {
@@ -32,7 +34,7 @@
 .circle .circle-content {
     font-family: 'Montserrat-Medium';
     font-size: 20px;
-    background-color: white;
+    background-color: color(white);
     padding-top: 5px;
     padding-bottom: 5px;
     position: absolute;
@@ -42,10 +44,10 @@
 }
 .ct1 {
     text-align: center;
-    color: #1e96d7;
+    color: color(primary-one);
     font-size: 20px;
 }
 .ct2 {
     text-align: center;
-    color: #192d6e;
+    color: color(primary-two);
 }

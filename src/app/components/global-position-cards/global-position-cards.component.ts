@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardBlue } from '../card-blue/card-blue.component';
 
 @Component({
   selector: 'global-position-cards',
@@ -7,7 +8,6 @@ import { Component } from '@angular/core';
 })
 
 export class GlobalPosCardsComponent {
-  tarjeta1 = 2855;
-  tarjeta2 = 2855;
-
+  private cardNumber = "1234 1234 1234 1234";
+  private cardAmount = 1234.56;
 }

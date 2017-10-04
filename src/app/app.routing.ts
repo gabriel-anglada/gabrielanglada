@@ -7,11 +7,19 @@ import {FlexBoxTestsPageComponent} from './pages/flexbox-tests/flexbox-tests.com
 import {CardsPageComponent} from './pages/cards/cards.component';
 import {NotificationsPageComponent} from "./pages/notifications/notifications.component";
 import { GlobalPosComponent } from './pages/global-pos/global-pos.component';
+import { ComponentLibrary } from './components/componet-library/component-library.component';
+import { CardBlue } from './components/card-blue/card-blue.component';
+import { CardBlueSoft } from './components/card-blue-soft/card-blue-soft.component';
+import { TagDarkBlue } from './components/tag-dark-blue/tag-dark-blue.component';
+import { TagPurple } from './components/tag-purple/tag-purple.component';
+import { CardMovementLine } from './components/card-movement-line/card-movement-line.component';
+import { AccountLine } from './components/account-line/account-line.component';
 
 export const appRoutes: Routes = [
   { path: 'account', component: AccountPageComponent },
   { path: 'account-info',      component: AccountInfoPageComponent },
   { path: 'cards',      component: CardsPageComponent },
+  { path: 'components', component: ComponentLibrary },
   { path: 'notifications',      component: NotificationsPageComponent },
   { path: 'onsen-ui',      component: OnsenUIPageComponent },
   { path: 'flexbox',      component: FlexBoxTestsPageComponent },
@@ -21,6 +29,7 @@ export const appRoutes: Routes = [
 ];
 
 export const PAGE_COMPONENTS = [
+  AccountLine,
   AccountPageComponent,
   AccountInfoPageComponent,
   OnsenUIPageComponent,
@@ -31,5 +40,11 @@ export const PAGE_COMPONENTS = [
 ];
 
 export const MODAL_COMPONENTS = [
-  SearchMovesModalComponent
+  SearchMovesModalComponent,
+  ComponentLibrary,
+  CardBlue,
+  CardBlueSoft,
+  CardMovementLine,
+  TagDarkBlue,
+  TagPurple,
 ];

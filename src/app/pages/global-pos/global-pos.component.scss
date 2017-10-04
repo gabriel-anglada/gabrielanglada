@@ -1,3 +1,5 @@
+@import "../../../styles/mixins_functions/color";
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@
 }
 .global-pos-container {
     position: relative;
-    background: linear-gradient(#1e96d7 0%, #1e96d7 36.81%, #f3f3f7 36.81%, #f3f3f7 100%);
+    background: linear-gradient(color(primary-one) 0%, color(primary-one) 36.81%, color(pale-grey) 36.81%, color(pale-grey) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
@@ -20,7 +22,7 @@
 .global-title {
     margin: 0;
     padding: 0;
-    color: white;
+    color: color(white);
     font-family: 'Montserrat-Medium';
     font-size: 12px;
     font-weight: 500;
@@ -29,7 +31,7 @@
     margin: 0;
     padding: 0;
     padding-top: 1px;
-    color: white;
+    color: color(white);
     font-size: 40px;
     font-family: 'Montserrat-Medium';
     font-weight: 500;
@@ -42,11 +44,11 @@
     font-size: 10px;
     text-align: center;
     word-break: keep-all;
-    color: white;
+    color: color(white);
     padding: 2px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: rgb(26,47,108);
+    background-color: color(primary-two);
     border-radius: 30px;
     animation: fadein 3s;
     font-family: 'Montserrat-Medium';
@@ -59,8 +61,8 @@
     font-size: 10px;
     word-break: keep-all;
     text-align: center;
-    color: white;
-    background-color: rgb(90,49,128);
+    color: color(white);
+    background-color: color(primary-two);
     padding: 2px;
      padding-top: 5px;
     padding-bottom: 5px;
@@ -74,7 +76,7 @@
     left: -600px;
     top: -200px;
     height: auto;
-    background-color: #ffffff;
+    background-color: color(white);
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
     -webkit-animation: slide 0.5s forwards;
     -webkit-animation-delay: 0.5s;
@@ -95,10 +97,10 @@
   padding-top: 17px;
   padding-bottom: 12px;
   font-size: 16px;
-  color: white;
+  color: color(white);
   width: 48%;
   height: 48px;
-  background-color: #ebaa00;
+  background-color: color(secondary-one);
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
   animation: fadein 3s ;
   display: block;
@@ -109,7 +111,7 @@
 
 }
 .button-container .btn.secondary{
-  background-color: white;
+  background-color: color(white);
   float: right;
   padding: 0;
 }
@@ -120,7 +122,7 @@
   position: absolute;
   right: 15px;
   top: 18px;
-  fill: white;
+  fill: color(white);
 }
 .btn-bizum{
   width: 81px;

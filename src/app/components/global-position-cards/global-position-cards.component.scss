@@ -1,3 +1,5 @@
+@import "../../../styles/mixins_functions/color";
+
 .global-cards  {
     padding-left: 8px;
     padding-right: 8px;
@@ -6,18 +8,18 @@
 .client-card {
     margin: 0 auto;
     border-radius: 8px;
-    background: linear-gradient(#192d6e 0%, #192d6e 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(color(primary-two) 0%, color(primary-two) 50%, color(white) 50%, color(white) 100%);
     height: 50px;
     overflow: hidden;
 }
 .client-card.second {
-    background: linear-gradient(#1e96d7 0%, #1e96d7 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(color(primary-one) 0%, color(primary-one) 50%, color(white) 50%, color(white) 100%);
 }
 .client-card .number{
   position: relative;
   top: 10%;
   left: 5%;
-  color: white;
+  color: color(white);
   padding: 0;
   margin: 0;
   float: left;
@@ -26,7 +28,7 @@
   font-weight: normal;
 }
 .client-card .amount{
-  color: white;
+  color: color(white);
   padding: 3px;
   margin: 0;
   float: right;
@@ -42,8 +44,8 @@
     margin: 0 auto;
     z-index: 1;
     border-radius: 50px;
-    background: linear-gradient(#ffffff 0px, #ffffff 5px, #192d6e 5px, #192d6e 100%);
+    background: linear-gradient(color(white) 0px, color(white) 5px, color(primary-two) 5px, color(primary-two) 100%);
 }
 .client-card .ball.secondary {
-    background: linear-gradient(#ffffff 0px, #ffffff 5px, #1e96d7 5px, #1e96d7 100%);
+    background: linear-gradient(color(white) 0px, color(white) 5px, color(primary-one) 5px, color(primary-one) 100%);
 }

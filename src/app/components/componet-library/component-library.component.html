@@ -1,0 +1,29 @@
+<card-blue
+  [cardNumber]="cardNumber"
+  [cardAmount]="cardAmount">
+</card-blue>
+
+<card-blue-soft
+  [cardNumber]="cardNumber"
+  [cardAmount]="cardAmount">
+</card-blue-soft>
+
+<tag-dark-blue
+  [title]="tagTitle"
+  [amount]="tagAmount">
+</tag-dark-blue>
+
+<tag-purple
+  [title]="tagTitle"
+  [amount]="tagAmount">
+</tag-purple>
+
+<ul class="exp-list-all">
+  <card-movement-line [movement]="movement" *ngFor="let movement of movements"></card-movement-line>
+</ul>
+
+<div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
+
+<ul class="exp-list-all">
+  <account-line [account]="account" *ngFor="let account of accounts"></account-line>
+</ul>

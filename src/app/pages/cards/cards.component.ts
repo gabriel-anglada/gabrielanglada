@@ -22,9 +22,7 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
   ]
 })
 export class CardsPageComponent implements OnInit {
-  // "Listener", when this changes, information currently displayed changes
-  @Input() private currentCard: ClientCardModel;
-
+  private currentCard: ClientCardModel;
   private cards: Array<ClientCardModel>;
 
   //for animation triggers
@@ -35,7 +33,7 @@ export class CardsPageComponent implements OnInit {
   private price = 37.45;
 
   constructor() {}
-  
+
   ngOnInit() {
     this.cards = [
       new ClientCardModel("1243 5432 6532 9357", "Pau Roger Garcia", 1234, 13434, 14324, 342341, "assets/bml-visa-debito-1.png"),

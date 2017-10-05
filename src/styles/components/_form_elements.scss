@@ -12,10 +12,12 @@
   @include padding($paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2, $paddingDimension / 2);
   text-align: left;
   position: relative;
+  width: 100%;
+  box-sizing: border-box ;
   label {
-    @include form-label();
+    @include label();
   }
-  input, select {
+  input:not([type=checkbox]), select {
     box-sizing: border-box;
     width: 100%;
     height: 38px;
@@ -25,7 +27,7 @@
     padding: 8px;
     -webkit-appearance: none;
     //@TODO apply correct text mixin
-    @include body-regular();
+    @include body();
   }
   &.date, &.select {
     label {
@@ -38,6 +40,27 @@
         right: 15px;
         bottom: 15px;
         pointer-events: none;
+      }
+    }
+  }
+  &.checkbox {
+    label {
+      color: color(black);
+      input {
+        opacity: 0;
+      }
+      &::before {
+        margin-top: 3px;
+        position: absolute;
+        pointer-events: none;
+        content: url('/assets/icon/svg/icon-checkbox.svg');
+      }
+    }
+    &.checked {
+      label {
+        &::before {
+          content: url('/assets/icon/svg/icon-checkbox-selected.svg');
+        }
       }
     }
   }

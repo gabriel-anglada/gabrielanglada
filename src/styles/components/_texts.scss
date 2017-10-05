@@ -1,27 +1,67 @@
 @import "../mixins_functions/texts";
 
+////
+/// @group components/texts
+////
 body {
-  @include body-regular();
+  p {
+    margin: 0;
+    @include body();
+  }
 }
 
-h2 {
-  font-size: 16px !important;
-  font-weight: 500;
-  color: color(primary);
+
+/// Apply x-big class
+.x-big {
+  @include x-big();
+}
+/// Apply big class
+.big {
+  @include big();
+}
+/// Apply title class
+.title {
+  @include title();
+}
+/// Apply h1 class
+h1, .h1 {
+  @include h1();
+}
+/// Apply h2 class
+h2, .h2 {
+  @include h2();
+}
+/// Apply body class
+body, .body {
+  @include body();
+}
+/// Apply label class
+label, .label {
+  @include label();
+}
+/// Apply small class
+small, .small {
+  @include small();
+}
+/// Apply tiny class
+.tiny {
+  @include tiny();
+}
+/// Apply tiny class
+.number-big {
+  @include number-big();
+}
+/// Apply tiny class
+.number-medium {
+  @include number-medium();
+}
+/// Apply tiny class
+.number-small {
+  @include number-small();
+}
+/// Apply tiny class
+.number-tiny {
+  @include number-tiny();
 }
 
-p {
-  margin: 0;
-}
 
-.body-bold {
-  @include body-bold();
-}
-
-.body-regular {
-  @include body-regular();
-}
-
-.form-label {
-  @include form-label();
-}

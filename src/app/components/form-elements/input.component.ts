@@ -17,8 +17,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl, Va
     }]
 })
 export class InputComponent implements ControlValueAccessor, Validator {
-  private value: string | number;
-  private data: any;
+  public value: string | number | boolean;
+  public data: any;
   @Input('placeholder') placeholder = '';
   @Input('type') type = 'text';
   @Input('label') label = 'label';
@@ -43,12 +43,12 @@ export class InputComponent implements ControlValueAccessor, Validator {
   public registerOnTouched() { }
 
   // change events from the input
-  private onChange(event) {
+  public onChange(event) {
     this.data = event.target.value;
     // update the form
     this.propagateChange(this.data);
   }
 
   // the method set in registerOnChange to emit changes back to the form
-  private propagateChange = (_: any) => { };
+  public propagateChange = (_: any) => { };
 }

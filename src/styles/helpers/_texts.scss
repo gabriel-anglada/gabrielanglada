@@ -1,30 +1,58 @@
+@import "../mixins_functions/texts";
+
 ////
 /// @group helpers/fonts
 ////
 
-/// Apply font-size using font-size-{size} where *size = [8,10,12,14,16,18,20]*. Can be attribute or class
+/// Apply font-size using font-size-{size} where *size = [8,10,12,14,16,18,20,24,30,40]*. Can be attribute or class
 /// @name font-size-{size}
 /// @example markup
 ///   <div font-size-8>Apply font size 8</div>
 ///   <div class="font-size-16">Apply font size 16</div>
 [font-size-8], .font-size-8 {
-  font-size: 8px !important;
+  @include font-size(8px);
 }
 [font-size-10], .font-size-10 {
-  font-size: 10px !important;
+  @include font-size(10px);
 }
 [font-size-12], .font-size-12 {
-  font-size: 12px !important;
+  @include font-size(12px);
 }
 [font-size-14], .font-size-14 {
-  font-size: 14px !important;
+  @include font-size(14px);
 }
 [font-size-16], .font-size-16 {
-  font-size: 16px !important;
+  @include font-size(16px);
 }
 [font-size-18], .font-size-18 {
-  font-size: 18px !important;
+  @include font-size(18px);
 }
 [font-size-20], .font-size-20 {
-  font-size: 20px !important;
+  @include font-size(20px);
+}
+[font-size-24], .font-size-24 {
+  @include font-size(24px);
+}
+[font-size-30], .font-size-30 {
+  @include font-size(30px);
+}
+[font-size-40], .font-size-40 {
+  @include font-size(40px);
+}
+
+[font-regular], .font-regular {
+  @include font-weight(400);
+}
+[font-medium], .font-medium {
+  @include font-weight(500);
+}
+[font-semibold], .font-semibold {
+  @include font-weight(600);
+}
+[font-bold], .font-bold {
+  @include font-weight(700);
+}
+
+[font-italic], .font-italic {
+  @include font-style(italic);
 }

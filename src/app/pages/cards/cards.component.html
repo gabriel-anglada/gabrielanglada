@@ -1,11 +1,10 @@
-<div class="cards-opt-container" padding-v>
-  <div class="carousel-container">
-    <ons-carousel id="carousel" (postchange)="userSwiped($event)" #carousel swipeable auto-scroll centered class="bml-cards-carousel">
-      <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
-        <img [src]="card.imgSource">
-      </ons-carousel-item>
-    </ons-carousel>
-  </div>
+<div class="content" padding>
+
+  <ons-carousel margin-bottom #carousel (postchange)="userSwiped($event)" swipeable auto-scroll overscrollable centered auto-scroll-ratio="0.1" class="bml-cards-carousel">
+    <ons-carousel-item half-padding *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
+      <img [src]="card.imgSource" width="100%">
+    </ons-carousel-item>
+  </ons-carousel>
 
   <div class="cards-opt-container">
     <div margin-bottom class="bml-box">
@@ -20,43 +19,54 @@
         </div>
       </div>
 
-      <div row class="border-bottom border-pale-grey">
-        <p col h-align-center class="black limit">Límite de crédito: {{currentCard.limitAmount | currency:'EUR':true:'1.2-2'}}</p>
+      <div row class="border-bottom border-pale-grey" padding>
+        <p col h-align-center class="black">ímite de crédito: {{currentCard.limitAmount | currency:'EUR':true:'1.2-2'}}</p>
       </div>
 
-      <div row style="padding-left:8px;padding-top: 8px;padding-bottom: 8px;">
-        <ul col class="attributes-list">
-          <li text-left class="steel"><strong class="black">Nombre:</strong> {{currentCard.clientName}}</li>
-          <li text-left class="steel"><strong class="black">Número tarjeta:</strong> {{currentCard.cardNumber}}</li>
-          <li text-left class="steel"><strong class="black">Balance:</strong> {{currentCard.cardBalance | currency:'EUR':true:'1.2-2'}}</li>
+      <div row half-padding>
+        <ul col class="bml-list-attributes">
+          <li text-left class="steel"><span class="black">Nombre:</span> {{currentCard.clientName}}</li>
+          <li text-left class="steel"><span class="black">Número tarjeta:</span> {{currentCard.cardNumber}}</li>
+          <li text-left class="steel"><span class="black">Balance:</span> {{currentCard.cardBalance | currency:'EUR':true:'1.2-2'}}</li>
         </ul>
       </div>
     </div>
-    <div class="movements">
-      <div class="collapsible-header" (click)="desplegar()">
-        <p class="collapsible-header-text">Ùltimos movimientos <span class="bml-icon bml-icon-chevron-up movement-chevron" [@desplegado]='state'></span></p>
+
+    <div class="bml-box">
+      <div padding class="collapsible-header" (click)="expand()" h-align-center>
+        <h2 no-margin class="collapsible-header-text primary">Últimos movimientos <span class="bml-icon bml-icon-chevron-up movement-chevron" [@desplegado]="state"></span></h2>
       </div>
+
       <div id="collapsible-content" [@contentDeploy]='content'>
-        <ul class="exp-list-all" >
-          <li class="exp-list">
-            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-            <p class="list-detail">Pull Bear <br> Arteixo</p>
+        <ul class="bml-list-alternate-row-color">
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
           </li>
-          <li class="exp-list">
-            <p class="list-price">{{price| currency:'EUR': true:'1.2-2' }}</p>
-            <p class="list-detail">Pull Bear <br> Arteixo</p>
+
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
           </li>
-          <li class="exp-list">
-            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-            <p class="list-detail">Pull Bear <br> Arteixo</p>
-          </li>
-          <li class="exp-list">
-            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-            <p class="list-detail">Pull Bear <br> Arteixo</p>
-          </li>
-          <li class="exp-list">
-            <p class="list-price">{{price | currency:'EUR': true:'1.2-2' }}</p>
-            <p class="list-detail">Pull Bear <br> Arteixo</p>
+
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
           </li>
         </ul>
       </div>

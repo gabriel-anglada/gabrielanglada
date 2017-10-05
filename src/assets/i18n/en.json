@@ -4,6 +4,48 @@
 			"button": {
 				"search_movements": "Search movements"
 			}
+		},
+		"bizum_activate": {
+			"button": {
+				"submit": ""
+			},
+			"form": {
+				"accepted": {
+					"label": ""
+				},
+				"account": {
+					"label": "",
+					"placeholder": ""
+				},
+				"alias": {
+					"label": "",
+					"placeholder": ""
+				},
+				"phone": {
+					"label": "",
+					"placeholder": ""
+				}
+			},
+			"title": {
+				"activate": ""
+			}
+		},
+		"bizum_main": {
+			"button": {
+				"request_money": "",
+				"send_money": ""
+			},
+			"title": {
+				"last_operations": ""
+			}
+		},
+		"bizum_not_activated": {
+			"button": {
+				"activate": "",
+				"not_now": ""
+			},
+			"text": "",
+			"title": ""
 		}
 	}
 }

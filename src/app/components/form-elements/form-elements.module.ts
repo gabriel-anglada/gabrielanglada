@@ -1,8 +1,9 @@
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {InputComponent} from './input.component';
 import {SelectComponent} from './select.component';
+import {CheckboxComponent} from './checkbox.component';
 
 
 @NgModule({
@@ -12,12 +13,17 @@ import {SelectComponent} from './select.component';
   ],
   exports: [
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    CheckboxComponent
   ],
   declarations: [
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    CheckboxComponent
   ],
   providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ]
 })
 export class FormElementsModule { }

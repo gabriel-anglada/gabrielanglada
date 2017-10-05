@@ -1,0 +1,17 @@
+<div class="content" padding h-align-center v-align-middle>
+  <div double-margin-bottom class="bml-box" double-padding h-align-center>
+    <img margin-bottom src="assets/images/logos/bizum-logo.png">
+
+    <h2 margin-bottom class="primary">{{ 'page.bizum_not_activated.title' | translate }}</h2>
+
+    <p>{{ 'page.bizum_not_activated.text' | translate }}</p>
+  </div>
+
+  <div margin-bottom>
+    <button class="bml-button bml-button-primary" routerLink="/bizum/activate">{{ 'page.bizum_not_activated.button.activate' | translate }}</button>
+  </div>
+
+  <div>
+    <button class="bml-button bml-button-link">{{ 'page.bizum_not_activated.button.not_now' | translate }}</button>
+  </div>
+</div>

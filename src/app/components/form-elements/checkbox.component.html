@@ -1,0 +1,12 @@
+<div class="bml-form-group checkbox" [class.checked]="value">
+  <label class="body">
+    <input type="checkbox"
+           [checked]="value"
+           (change)="onChange($event)">
+    <span [innerHtml]="label"></span>
+  </label>
+</div>
+
+
+
+

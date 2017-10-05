@@ -1,23 +1,82 @@
+@import "../variables";
 @import "../mixins_functions/color";
+@import "../mixins_functions/box_model";
 
-.bml-list-alternate-row-color {
-  ons-row {
-    &:nth-child(odd) {
-      background: color(almost-white);
-    }
-  }
-}
+////
+/// @group components/list
+////
 
 ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  &.attributes-list {
+
+/// Add a primary color bullet in every _li_ item
+/// @name bml-list-attributes
+/// @example markup
+///   <ul class="bml-list-attributes">
+///     <li>Item 1</li>
+///     <li>Item 2</li>
+///   </ul>
+  &.bml-list-attributes {
     li::before {
       content: "•";
       color: color(primary);
       font-size: 20px;
       margin-right: 5px
     }
+  }
+
+/// Alternate background color in _li_ items. The first _li_ element will be coloured
+/// @name bml-list-alternate-row-color
+/// @example markup
+///   <ul class="bml-list-alternate-row-color">
+///     <li>Item with almost-white background color</li>
+///     <li>Item without background-color</li>
+///   </ul>
+  &.bml-list-alternate-row-color {
+    li {
+      &:nth-child(odd) {
+        background: color(almost-white);
+      }
+    }
+  }
+
+/// Add pale-grey color bottom border in _li_ items except in the last _li_ element
+/// @name bml-list-border-bottom
+/// @example markup
+///   <ul class="bml-list-border-bottom">
+///     <li>Item 1</li>
+///     <li>Item 2</li>
+///   </ul>
+  &.bml-list-border-bottom {
+    li {
+      &:not(:last-child) {
+        border-bottom: solid 1px color(pale-grey);
+      }
+
+    }
+  }
+}
+
+/// Helper which specified in a container item adds a chevron-right icon on the right part of the container item
+/// @name arrow-right
+/// @example markup
+///   <ul>
+///     <li class="arrow-right">Item 1</li>
+///     <li class="arrow-right">Item 2</li>
+///   </ul>
+.arrow-right {
+  position: relative;
+  padding-right: 30px;
+  &::after {
+    font-family: 'bml' !important;
+    font-size: 16px;
+    content: "\e901";
+    @include margin(auto, $marginDimension / 2, auto, $marginDimension / 2);
+    color: color(primary-two);
+    position: absolute;
+    right: 0;
+    top: calc(50% - 9px);
   }
 }

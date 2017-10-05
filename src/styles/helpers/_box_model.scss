@@ -173,3 +173,10 @@
 [no-margin], .no-margin {
   @include margin(0, 0, 0, 0);
 }
+
+[full-width], .full-width {
+  width: 100%;
+}
+[full-height], .full-height {
+  height: 100%;
+}

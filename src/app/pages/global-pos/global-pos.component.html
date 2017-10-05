@@ -1,0 +1,18 @@
+<div class="global-pos-container">
+  <div class="account-container">
+    <div style="width: 100%;text-align: center">
+      <p class="global-title">{{title}}</p>
+      <p class="global-total">{{ total | currency:'EUR': true:'1.2-2'}}</p>
+    </div>
+    <div class="top-container">
+      <p class="global-finance">Financiación: {{ finance | currency:'EUR': true:'1.2-2'}}</p>
+      <p class="global-invest">Inversión: {{ invest | currency:'EUR': true:'1.2-2'}}</p>
+    </div>
+  </div>
+  <global-position-accounts></global-position-accounts>
+  <global-position-cards></global-position-cards>
+  <div class="button-container">
+    <button class="btn" >Jubilacion<img src="assets/chevron-right.svg" class="button-arrow"/></button>
+    <button class="btn secondary"><img src="assets/bizum.jpg" class="btn-bizum"><img src="assets/chevron-right.svg" class="button-arrow"/></button>
+  </div>
+</div>

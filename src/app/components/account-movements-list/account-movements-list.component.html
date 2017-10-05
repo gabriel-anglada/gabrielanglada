@@ -1,0 +1,14 @@
+<ul class="bml-list-alternate-row-color">
+  <li row *ngFor="let account of accountMovements">
+    <div col col-60px half-padding>
+      <small no-margin class="steel font-size-12">{{ account.date }}</small>
+    </div>
+    <div col half-padding>
+      <p no-margin class="black">{{ account.name }}</p>
+    </div>
+    <div col col-80px half-padding h-align-right>
+      <span no-margin [class.danger]="account.type == 'negative'" [class.success]="account.type != 'negative'" class="number-small">{{ account.balance | currency:'EUR':true:'1.2-2' }}</span>
+      <span no-margin class="steel font-size-10 number-tiny">{{ account.total | currency:'EUR':true:'1.2-2' }}</span>
+    </div>
+  </li>
+</ul>

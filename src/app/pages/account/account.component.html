@@ -1,4 +1,4 @@
-<div class="content" double-padding >
+<div class="content" padding>
   <div margin-bottom class="bml-header-account">
     <div row class="bml-header-title" routerLink="/account-info">
       <p col h-align-center no-margin class="white font-medium">
@@ -19,20 +19,9 @@
   <div margin-bottom class="bml-box">
     <h2 no-margin padding text-center (click)="onSearchModalOpen()" class="primary"><span class="bml-icon bml-icon-glass primary-two"></span> {{ 'page.account.button.search_movements' | translate }}</h2>
 
-    <ul class="bml-list-alternate-row-color">
-      <li row *ngFor="let movement of movements">
-        <div col col-60px half-padding>
-          <small no-margin class="steel font-size-12">{{ movement.date }}</small>
-        </div>
-        <div col half-padding>
-          <p no-margin class="black">{{ movement.concept }}</p>
-        </div>
-        <div col col-70px half-padding h-align-right>
-          <span no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'" class="number-small">{{ movement.charge }}€</span>
-          <span no-margin class="steel font-size-10 number-tiny">{{ movement.global }}€</span>
-        </div>
-      </li>
-    </ul>
+    <account-movements-list
+      [accountMovements]="accountMovements">
+    </account-movements-list>
   </div>
 </div>
 

@@ -1,40 +1,75 @@
-<div class="content" padding-v>
+<div class="content" padding>
 
-  <ons-carousel #carousel swipeable auto-scroll overscrollable centered auto-scroll-ratio="0.1" class="bml-cards-carousel">
+  <ons-carousel margin-bottom #carousel (postchange)="userSwiped($event)" swipeable auto-scroll overscrollable centered auto-scroll-ratio="0.1" class="bml-cards-carousel">
     <ons-carousel-item half-padding *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
-      <img [src]="card.image" width="100%">
+      <img [src]="card.imgSource" width="100%">
     </ons-carousel-item>
   </ons-carousel>
 
-  <div double-padding>
+  <div class="cards-opt-container">
     <div margin-bottom class="bml-box">
       <div row class="border-bottom border-pale-grey">
         <div col padding class="border-right border-pale-grey">
-          <h3 text-center no-margin class="primary">1.284€</h3>
+          <h3 text-center no-margin class="primary">{{currentCard.spentAmount | currency:'EUR':true:'1.2-2'}}</h3>
           <p text-center no-margin class="primary-two">gastado</p>
         </div>
         <div col padding>
-          <h3 text-center no-margin class="primary">2.123€</h3>
+          <h3 text-center no-margin class="primary">{{currentCard.availableAmount | currency:'EUR':true:'1.2-2'}}</h3>
           <p text-center no-margin class="primary-two">disponible</p>
         </div>
       </div>
 
-      <div row class="border-bottom border-pale-grey">
-        <p col h-align-center class="black">Límite de crédito: 3.800€</p>
+      <div row class="border-bottom border-pale-grey" padding>
+        <p col h-align-center class="black">ímite de crédito: {{currentCard.limitAmount | currency:'EUR':true:'1.2-2'}}</p>
       </div>
 
       <div row half-padding>
         <ul col class="bml-list-attributes">
-          <li text-left class="steel"><strong class="black">Nombre:</strong> Pau Martí García</li>
-          <li text-left class="steel"><strong class="black">Número tarjeta:</strong> 1234 5678 8765 4321</li>
-          <li text-left class="steel"><strong class="black">Balance:</strong> 3.456,34€</li>
+          <li text-left class="steel"><span class="black">Nombre:</span> {{currentCard.clientName}}</li>
+          <li text-left class="steel"><span class="black">Número tarjeta:</span> {{currentCard.cardNumber}}</li>
+          <li text-left class="steel"><span class="black">Balance:</span> {{currentCard.cardBalance | currency:'EUR':true:'1.2-2'}}</li>
         </ul>
       </div>
     </div>
 
-    <div margin-bottom padding class="bml-box">
-      <p no-margin text-center>Últimos movimientos <span class="bml-icon bml-icon-chevron-down"></span></p>
+    <div class="bml-box">
+      <div padding class="collapsible-header" (click)="expand()" h-align-center>
+        <h2 no-margin class="collapsible-header-text primary">Últimos movimientos <span class="bml-icon bml-icon-chevron-up movement-chevron" [@desplegado]="state"></span></h2>
+      </div>
+
+      <div id="collapsible-content" [@contentDeploy]='content'>
+        <ul class="bml-list-alternate-row-color">
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
+          </li>
+
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
+          </li>
+
+          <li row>
+            <div col half-padding>
+              <p>Pull Bear</p>
+              <p>Arteixo</p>
+            </div>
+            <div col col-80px half-padding h-align-right>
+              <p class="number-small steel">{{price | currency:'EUR': true:'1.2-2' }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-
 </div>

@@ -1,0 +1,12 @@
+@import "../../../styles/mixins_functions/color";
+.collapsible-header {
+  .collapsible-header-text {
+    .movement-chevron {
+      display: inline-block;
+    }
+  }
+}
+
+#collapsible-content {
+  overflow: hidden;
+}

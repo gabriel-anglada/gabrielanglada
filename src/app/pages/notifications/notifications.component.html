@@ -2,7 +2,7 @@
   <ul>
     <li row margin-bottom class="bml-box" *ngFor="let notification of notifications">
       <div col half-padding>
-        <p half-margin-bottom>{{ notification.date }}</p>
+        <small half-margin-bottom class="steel">{{ notification.date }}</small>
         <p>{{ notification.text }}</p>
       </div>
 

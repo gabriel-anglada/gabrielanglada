@@ -1,0 +1,8 @@
+@import "../../../styles/mixins_functions/color";
+
+card-movement-line:nth-child(odd) {
+  background-color: color(almost-white);
+}
+card-movement-line:nth-child(even) {
+  background-color: color(white);
+}

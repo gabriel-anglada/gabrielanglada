@@ -34,6 +34,7 @@
 ///   </div>
 /// @see $colors
 [row], .row {
+  box-sizing: border-box;
   display: -webkit-flex;
   display: flex;
   // The flex-direction property specifies the direction of the flexible items inside the flex container.
@@ -50,6 +51,7 @@
   flex-wrap: nowrap;
   width: 100%;
   [col], .col {
+    box-sizing: border-box;
     width: 100%;
     // Fixed widths
     &[col-10px], &.col-10px {
@@ -124,6 +126,22 @@
 }
 [h-align-right], .h-align-right {
   text-align: right;
+}
+
+[v-align-top], .v-align-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+[v-align-middle], .v-align-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+}
+[v-align-bottom], .v-align-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 [center], .center {

@@ -1,0 +1,33 @@
+<div class="content" padding>
+  <div row margin-bottom >
+    <div col half-margin-right padding h-align-center class="bml-box">
+      <span class="bml-icon bml-icon-upload font-size-40 primary-three"></span>
+      <h2 margin-top class="font-regular">{{ 'page.bizum_main.button.send_money' | translate }}</h2>
+    </div>
+    <div col half-margin-left padding h-align-center class="bml-box">
+      <span class="bml-icon bml-icon-download font-size-40 primary-two"></span>
+      <h2 margin-top class="font-regular">{{ 'page.bizum_main.button.request_money' | translate }}</h2>
+    </div>
+  </div>
+
+  <div margin-bottom class="bml-box">
+    <h2 no-margin padding text-center class="primary">{{ 'page.bizum_main.title.last_operations' | translate }}</h2>
+
+    <ul half-padding class="bml-list-border-bottom">
+      <li row class="arrow-right" *ngFor="let operation of operations">
+        <div col col-70px half-padding>
+          <img class="image-user medium" [src]="operation.user.image">
+        </div>
+        <div col half-padding>
+          <p no-margin class="black font-medium">{{ operation.user.fullname }}</p>
+          <p no-margin class="small slate-grey">{{ operation.concept }}</p>
+          <p no-margin [class.secondary-one]="operation.status == 'pending'" [class.success]="operation.status == 'sent'" class="font-italic">{{ operation.status }}</p>
+        </div>
+        <div col col-80px half-padding v-align-middle>
+          <span no-margin class="number-medium">{{ operation.amount }}€</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>

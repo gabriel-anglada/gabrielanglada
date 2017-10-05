@@ -11,14 +11,7 @@ export class AccountMovementsList implements AfterViewInit {
 
   constructor(){
   }
+
   ngAfterViewInit() {
-    var balances: HTMLCollection = document.getElementsByClassName('item-balance');
-    for(var i = 0; i < balances.length; i++ ){
-      if ( parseFloat(balances[i].innerHTML) < 0 ){
-        (<HTMLElement>balances[i]).style.color = '#e63241';
-      } else {
-        (<HTMLElement>balances[i]).style.color = '#00a046';
-      }
-    }
   }
 }

@@ -4,6 +4,48 @@
 			"button": {
 				"search_movements": "Buscar movimientos"
 			}
+		},
+		"bizum_activate": {
+			"button": {
+				"submit": "Siguiente"
+			},
+			"form": {
+				"accepted": {
+					"label": "He leído y aceptado los <span class='primary'>términos y condiciones</span>"
+				},
+				"account": {
+					"label": "Cuenta",
+					"placeholder": "Selecciona la cuenta"
+				},
+				"alias": {
+					"label": "Alias",
+					"placeholder": "Selecciona tu alias para la cuenta"
+				},
+				"phone": {
+					"label": "Teléfono",
+					"placeholder": "Introduce tu teléfono"
+				}
+			},
+			"title": {
+				"activate": "Activar Bizum"
+			}
+		},
+		"bizum_main": {
+			"button": {
+				"request_money": "Solicitar dinero",
+				"send_money": "Enviar dinero"
+			},
+			"title": {
+				"last_operations": "Últimas operaciones"
+			}
+		},
+		"bizum_not_activated": {
+			"button": {
+				"activate": "Activar Bizum",
+				"not_now": "Ahora no, gracias"
+			},
+			"text": "Bizum es un servicio cómodo y seguro de pagar y cobrar a tus amigos desde tu teléfono móvil. Sólo tenéis que estar dados de alta en Bizum. Es un servicio gratuito.",
+			"title": "Bizum, con Banco Mediolamun, es más Bizum"
 		}
 	}
 }

@@ -15,23 +15,24 @@ export class AccountPageComponent implements AfterViewInit, OnDestroy, OnInit {
 
   constructor(private modalFactory: ModalFactory) {}
   private accountMovements: Array<any> = [];
+
   ngAfterViewInit() {
   }
 
   ngOnInit() {
     this.accountMovements = [
-      {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 },
-      {date: "2 May", name: "Ingreso nómina Banco Mediolanum", balance: -12.56, total: 5345 },
-      {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 234234 },
-      {date: "2 May", name: "Ingreso nómina Banco Mediolanum", balance: -12.56, total: 34232 },
-      {date: "5 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 4234 },
-      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: 12.56, total: 342423 },
-      {date: "2 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 3424 },
-      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: -322.56, total: 4234 },
-      {date: "2 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 },
-      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: -45.56, total: 76776 },
+      {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: 'positive' },
+      {date: "2 May", name: "Ingreso nómina Banco Mediolanum", balance: -12.56, total: 5345, type: 'negative' },
+      {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 234234, type: 'positive' },
+      {date: "2 May", name: "Ingreso nómina Banco Mediolanum", balance: -12.56, total: 34232, type: 'negative' },
+      {date: "5 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 4234, type: 'positive' },
+      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: 12.56, total: 342423, type: 'negative' },
+      {date: "2 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 3424, type: 'positive' },
+      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: -322.56, total: 4234, type: 'negative' },
+      {date: "2 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: 'positive' },
+      {date: "3 May", name: "Ingreso nómina Banco Mediolanum", balance: -45.56, total: 76776, type: 'negative' },
     ];
-    
+
     this.modalFactory
       .createModal(SearchMovesModalComponent)
       .then(({modal, destroy}) => {

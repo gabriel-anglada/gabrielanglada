@@ -1,70 +1,11 @@
 @import "../../../styles/mixins_functions/color";
-
-#carousel {
-  margin-bottom: 20px;
-}
-ons-carousel-item img {
-  width: 85%;
-  height: auto;
-}
-.cards-opt-container{
-  position: relative;
-  background: linear-gradient(color(primary-one) 0%, color(primary-one) 36.81%, color(pale-grey) 36.81%, color(pale-grey) 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 8px 10px;
-  font-family: 'Montserrat-Regular';
-}
-.carousel-container {
-  padding-top: 15px;
-  width: 100%;
-  overflow:hidden;
-}
-.limit {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.movements {
-  margin-top: 10px;
-  background-color: color(white);
-  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.14);
-  width: 100%;
-}
-ul.exp-list-all {
-  list-style: none;
-  padding:0;
-  margin-top: 0;
-}
-li.exp-list {
-  padding: 9px 12px;
-}
-li.exp-list p{
-  margin: 0;
-}
-li.exp-list:nth-child(odd){
-  background-color: color(almost-white);
-}
-li.exp-list:nth-child(even){
-  background-color: color(white);
-}
-.list-price {
-  float: right;
-  text-align: right;
-  color: color(steel);
-  font-size: 16px;
-}
-.collapsible-header-text {
-  text-align: center;
-  color: color(primary-one);
-  padding: 22px 0;
-  font-family: 'Montserrat-Medium';
-  font-size: 16px;
-  display: table;
-  margin: 0 auto;
-  .movement-chevron {
-    display: inline-block;
+  .collapsible-header-text {
+    .movement-chevron {
+      display: inline-block;
+    }
   }
 }
+
 #collapsible-content {
   overflow: hidden;
 }

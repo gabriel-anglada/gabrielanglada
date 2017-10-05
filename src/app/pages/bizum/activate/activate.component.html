@@ -1,0 +1,27 @@
+<div class="content" padding v-align-bottom>
+  <div class="bml-box" margin-bottom>
+    <h2 no-margin padding text-center class="primary">{{ 'page.bizum_activate.title.activate' | translate }}</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate padding-bottom half-padding-h h-align-center>
+      <bml-select formControlName="account"
+                  [placeholder]="'page.bizum_activate.form.account.placeholder' | translate"
+                  [label]="'page.bizum_activate.form.account.label' | translate" [(options)]="accounts"></bml-select>
+
+      <bml-input formControlName="phone"
+                  [placeholder]="'page.bizum_activate.form.phone.placeholder' | translate"
+                  [label]="'page.bizum_activate.form.phone.label' | translate"></bml-input>
+
+      <bml-input formControlName="alias"
+                 [placeholder]="'page.bizum_activate.form.alias.placeholder' | translate"
+                 [label]="'page.bizum_activate.form.alias.label' | translate"></bml-input>
+
+      <bml-checkbox formControlName="accepted"
+                    [label]="'page.bizum_activate.form.accepted.label' | translate"></bml-checkbox>
+
+      <button double-margin-v
+              type="submit"
+              [disabled]="form.invalid"
+              class="bml-button bml-button-primary">{{ 'page.bizum_activate.button.submit' | translate }}</button>
+    </form>
+  </div>
+</div>

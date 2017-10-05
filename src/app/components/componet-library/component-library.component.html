@@ -31,4 +31,13 @@
 
 <div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
 
+<div text-center style="width: 100%;">
+  <button (click)="alert()" class="bml-button bml-button-primary">Press here</button>
+</div>
+<div class="alert" [hidden]="!showAlert" (click)="alert()"></div>
+<div double-padding text-center class="alert-content" [hidden]="!showAlert">
+  <img src="../../assets/confirmed.svg">
+  <p>La transferencia se ha realizado con éxito</p>
+  <button (click)="alert()" class="bml-button bml-button-primary">Press here</button>
+</div>
 </div>

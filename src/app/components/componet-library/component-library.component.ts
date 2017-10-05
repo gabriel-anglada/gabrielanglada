@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class ComponentLibrary {
+  private showAlert = false;
   //card component
   private cardNumber = "1234 1234 1234 1234";
   private cardAmount = 1234.56;
@@ -22,7 +23,7 @@ export class ComponentLibrary {
     {price: 1234.12, name: "Pull Bear", company: "Arteixo"},
     {price: 4341.23, name: "Pull Cat", company: "Arteixo"},
     {price: 4344.43, name: "Pull Dog", company: "Arteixo"},
-  ]
+  ];
 
   //account lines
   private accounts = [
@@ -31,5 +32,9 @@ export class ComponentLibrary {
     {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 },
     {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: -12.56, total: 12867 },
     {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 }
-  ]
+  ];
+
+  alert() {
+    this.showAlert = this.showAlert ? false : true;
+  }
 }

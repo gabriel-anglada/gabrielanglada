@@ -1,15 +1,15 @@
 <ul>
-  <li class="account-list-item" *ngFor="let account of accountMovements">
-    <div class="account-list-item-content">
-      <div class="cell left">
+  <li  no-padding no-margin font-size-14 class="account-list-item" *ngFor="let account of accountMovements">
+    <div half-padding class="account-list-item-content">
+      <div text-left font-size-12 slate-grey class="cell left">
         <p class="item-date">{{account.date}}</p>
       </div>
       <div class="cell middle">
         <p class="item-name">{{account.name}}</p>
       </div>
-      <div class="cell right">
+      <div text-right font-size-16 class="cell right">
         <p class="item-balance">{{account.balance | currency:'EUR':true:'1.2-2'}}</p>
-        <p class="item-total">{{account.total | currency:'EUR':true:'1.2-2'}}</p>
+        <p font-size-8 slate-grey class="item-total">{{account.total | currency:'EUR':true:'1.2-2'}}</p>
       </div>
     </div>
   </li>

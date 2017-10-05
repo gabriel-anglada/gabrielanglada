@@ -6,3 +6,21 @@ card-movement-line:nth-child(odd) {
 card-movement-line:nth-child(even) {
   background-color: color(white);
 }
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+.alert-content{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  height: auto;
+  width: 80%;
+  border-radius: 8px;
+  background-color: color(white);
+}

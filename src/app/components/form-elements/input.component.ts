@@ -21,7 +21,7 @@ export class InputComponent implements ControlValueAccessor, Validator {
   public data: any;
   @Input('placeholder') placeholder = '';
   @Input('type') type = 'text';
-  @Input('label') label = 'label';
+  @Input('label') label = '';
 
   // this is the initial value set to the component
   public writeValue(val: any) {

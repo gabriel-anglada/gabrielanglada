@@ -1,7 +1,7 @@
-<div class="bml-form-group checkbox" [class.checked]="value">
+<div class="bml-form-group checkbox" [class.checked]="checked">
   <label class="body">
     <input type="checkbox"
-           [checked]="value"
+           [checked]="checked"
            (change)="onChange($event)">
     <span [innerHtml]="label"></span>
   </label>

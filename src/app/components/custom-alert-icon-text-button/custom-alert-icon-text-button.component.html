@@ -1,0 +1,6 @@
+<div [@deployed]="showAlert" full-width class="alert" [hidden]="!showAlert"></div>
+<div margin double-padding text-center bg-white class="alert-content" [hidden]="!showAlert">
+  <img half-padding src={{icon}}>
+  <p padding>{{text}}</p>
+  <button half-padding (click)="showAlert = !showAlert" class="bml-button bml-button-primary">{{buttonText}}</button>
+</div>

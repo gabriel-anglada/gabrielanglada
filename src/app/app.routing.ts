@@ -5,6 +5,7 @@ import {Routes} from '@angular/router';
 import {OnsenUIPageComponent} from './pages/onsen-ui/onsen-ui.component';
 import {FlexBoxTestsPageComponent} from './pages/flexbox-tests/flexbox-tests.component';
 import {CardsPageComponent} from './pages/cards/cards.component';
+import { CustomAlertWithIcon } from './components/custom-alert-icon-text-button/custom-alert-icon-text-button.component';
 import {NotificationsPageComponent} from './pages/notifications/notifications.component';
 import { GlobalPosComponent } from './pages/global-pos/global-pos.component';
 import { ComponentLibrary } from './components/componet-library/component-library.component';
@@ -64,6 +65,7 @@ export const MODAL_COMPONENTS = [
   CardBlue,
   CardBlueSoft,
   CardMovementLine,
+  CustomAlertWithIcon,
   TagDarkBlue,
   TagPurple,
 ];

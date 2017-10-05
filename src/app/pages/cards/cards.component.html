@@ -1,8 +1,8 @@
 <div class="content" padding-v>
 
   <ons-carousel #carousel swipeable auto-scroll overscrollable centered auto-scroll-ratio="0.1" class="bml-cards-carousel">
-    <ons-carousel-item *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
-      <img [src]="card.image">
+    <ons-carousel-item half-padding *ngFor="let card of cards; let i = index;" class="carousel-item" [class.current]="carousel.getActiveIndex() == i">
+      <img [src]="card.image" width="100%">
     </ons-carousel-item>
   </ons-carousel>
 
@@ -24,7 +24,7 @@
       </div>
 
       <div row half-padding>
-        <ul col class="attributes-list">
+        <ul col class="bml-list-attributes">
           <li text-left class="steel"><strong class="black">Nombre:</strong> Pau Martí García</li>
           <li text-left class="steel"><strong class="black">Número tarjeta:</strong> 1234 5678 8765 4321</li>
           <li text-left class="steel"><strong class="black">Balance:</strong> 3.456,34€</li>

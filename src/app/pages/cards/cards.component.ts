@@ -13,12 +13,12 @@ export class CardsPageComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.cards = [
-      {image: 'assets/bml-visa-debito-1.png'},
-      {image: 'assets/bml-visa-debito-1.png'},
-      {image: 'assets/bml-visa-debito-1.png'},
-      {image: 'assets/bml-visa-debito-1.png'},
-      {image: 'assets/bml-visa-debito-1.png'},
-      {image: 'assets/bml-visa-debito-1.png'}
+      {image: 'assets/mock/bml-visa-debito-1.png'},
+      {image: 'assets/mock/bml-visa-debito-1.png'},
+      {image: 'assets/mock/bml-visa-debito-1.png'},
+      {image: 'assets/mock/bml-visa-debito-1.png'},
+      {image: 'assets/mock/bml-visa-debito-1.png'},
+      {image: 'assets/mock/bml-visa-debito-1.png'}
     ];
   }
 }

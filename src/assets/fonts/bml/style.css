@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'bml';
-  src:  url('bml.eot?ln2ges');
-  src:  url('bml.eot?ln2ges#iefix') format('embedded-opentype'),
-    url('bml.ttf?ln2ges') format('truetype'),
-    url('bml.woff?ln2ges') format('woff'),
-    url('bml.svg?ln2ges#bml') format('svg');
+  src:  url('bml.eot?q889om');
+  src:  url('bml.eot?q889om#iefix') format('embedded-opentype'),
+    url('bml.ttf?q889om') format('truetype'),
+    url('bml.woff?q889om') format('woff'),
+    url('bml.svg?q889om#bml') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,23 +24,83 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bml-icon-transfer:before {
+  content: "\e905";
+}
+.bml-icon-account:before {
+  content: "\e90a";
+}
+.bml-icon-user:before {
+  content: "\e90b";
+}
+.bml-icon-hamburguer:before {
+  content: "\e90c";
+}
+.bml-icon-verification:before {
+  content: "\e90d";
+}
+.bml-icon-settings:before {
+  content: "\e90e";
+}
+.bml-icon-off:before {
+  content: "\e90f";
+}
+.bml-icon-return:before {
+  content: "\e910";
+}
+.bml-icon-messages:before {
+  content: "\e911";
+}
+.bml-icon-fingerprint:before {
+  content: "\e912";
+}
+.bml-icon-other:before {
+  content: "\e913";
+}
+.bml-icon-camera:before {
+  content: "\e914";
+}
+.bml-icon-upload-image:before {
+  content: "\e915";
+}
+.bml-icon-album:before {
+  content: "\e916";
+}
+.bml-icon-bell:before {
+  content: "\e917";
+}
+.bml-icon-more:before {
+  content: "\e918";
+}
+.bml-icon-upload:before {
+  content: "\e919";
+}
+.bml-icon-download:before {
+  content: "\e91a";
+}
+.bml-icon-exclamation:before {
+  content: "\e91b";
+}
+.bml-icon-info:before {
+  content: "\e91c";
+}
+.bml-icon-chevron-up:before {
+  content: "\e908";
+}
+.bml-icon-chevron-right:before {
+  content: "\e901";
+}
 .bml-icon-chevron-down:before {
   content: "\e906";
 }
 .bml-icon-chevron-left:before {
   content: "\e907";
 }
-.bml-icon-chevron-up:before {
-  content: "\e908";
-}
-.bml-icon-trash:before {
-  content: "\e909";
-}
 .bml-icon-back:before {
   content: "\e900";
 }
-.bml-icon-chevron-right:before {
-  content: "\e901";
+.bml-icon-trash:before {
+  content: "\e909";
 }
 .bml-icon-close:before {
   content: "\e902";
@@ -50,7 +110,4 @@
 }
 .bml-icon-glass:before {
   content: "\e904";
-}
-.bml-icon-info:before {
-  content: "\e905";
 }

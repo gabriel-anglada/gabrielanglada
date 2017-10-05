@@ -15,4 +15,10 @@
     background: transparent;
     @include padding(0, 50px, 0, 50px);
   }
+
+  &.bml-button-link {
+    color: color(primary) !important;
+    background: transparent;
+    border: none;
+  }
 }

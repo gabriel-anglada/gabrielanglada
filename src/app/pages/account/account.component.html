@@ -1,35 +1,35 @@
 <div class="content" double-padding >
   <div margin-bottom class="bml-header-account">
     <div row class="bml-header-title" routerLink="/account-info">
-      <p col h-align-center no-margin class="white">
-        <span class="bml-icon bml-icon-info primary-two"></span>
+      <p col h-align-center no-margin class="white font-medium">
+        <small class="bml-icon bml-icon-info primary-two"></small>
         Cuenta común
       </p>
     </div>
     <div row half-margin-bottom class="bml-header-subtitle">
-      <p col h-align-center no-margin class="white">120.456,03€</p>
+      <p col h-align-center no-margin class="big white">120.456,03€</p>
     </div>
     <div row class="bml-header-tags">
       <div col h-align-center>
-        <p class="notification bml-tag bg-primary-two">ES56 3456 3465 2345 2344 <span class="bml-icon bml-icon-copy"></span></p>
+        <small class="notification bml-tag bg-primary-two">ES56 3456 3465 2345 2344 <span class="bml-icon bml-icon-copy"></span></small>
       </div>
     </div>
   </div>
 
   <div margin-bottom class="bml-box">
-    <h2 no-margin padding (click)="onSearchModalOpen()"><span class="bml-icon bml-icon-glass primary-two"></span> {{ 'page.account.button.search_movements' | translate }}</h2>
+    <h2 no-margin padding text-center (click)="onSearchModalOpen()" class="primary"><span class="bml-icon bml-icon-glass primary-two"></span> {{ 'page.account.button.search_movements' | translate }}</h2>
 
     <ul class="bml-list-alternate-row-color">
       <li row *ngFor="let movement of movements">
-        <div col col-50px half-padding>
-          <p no-margin class="steel font-size-12">{{ movement.date }}</p>
+        <div col col-60px half-padding>
+          <small no-margin class="steel font-size-12">{{ movement.date }}</small>
         </div>
         <div col half-padding>
           <p no-margin class="black">{{ movement.concept }}</p>
         </div>
         <div col col-70px half-padding h-align-right>
-          <span no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'">{{ movement.charge }}€</span>
-          <span no-margin class="steel font-size-10">{{ movement.global }}€</span>
+          <span no-margin [class.danger]="movement.type == 'negative'" [class.success]="movement.type == 'positive'" class="number-small">{{ movement.charge }}€</span>
+          <span no-margin class="steel font-size-10 number-tiny">{{ movement.global }}€</span>
         </div>
       </li>
     </ul>

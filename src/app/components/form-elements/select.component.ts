@@ -19,4 +19,7 @@ import {InputComponent} from './input.component';
 })
 export class SelectComponent extends InputComponent {
   @Input() options: any[];
+  constructor() {
+    super();
+  }
 }

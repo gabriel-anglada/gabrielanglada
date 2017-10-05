@@ -29,7 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
     ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { useHash: true } // <-- debugging purposes only
     ),
     HttpClientModule,
     TranslateModule.forRoot({

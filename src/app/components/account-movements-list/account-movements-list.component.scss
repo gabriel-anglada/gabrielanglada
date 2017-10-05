@@ -1,13 +1,9 @@
 @import "../../../styles/mixins_functions/color";
 
 .account-list-item {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
   font-family: 'Montserrat-Regular';
   background-color: inherit;
   .account-list-item-content {
-    padding: 8px;
     display: table;
     .cell {
       display: table-cell;
@@ -16,19 +12,10 @@
       width: auto;
     }
     .left {
-      text-align: left;
-      font-size: 12px;
-      color: color(slate-grey);
       width: 20%;
     }
     .right {
-      text-align: right;
       width: 20%;
-      font-size: 16px;
-    }
-    .item-total {
-      font-size: 8px;
-      color: color(slate-grey);
     }
   }
 }

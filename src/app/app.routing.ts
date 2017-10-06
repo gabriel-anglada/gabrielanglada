@@ -1,6 +1,6 @@
 import {AccountPageComponent} from './pages/account/account.component';
 import {AccountInfoPageComponent} from './pages/account-info/account-info.component';
-import {SearchMovesModalComponent} from './components/modals/search-moves/search-moves-modal.component';
+import {SearchMovesModalComponent} from './modals/search-moves/search-moves-modal.component';
 import {Routes} from '@angular/router';
 import {OnsenUIPageComponent} from './pages/onsen-ui/onsen-ui.component';
 import {FlexBoxTestsPageComponent} from './pages/flexbox-tests/flexbox-tests.component';

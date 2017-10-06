@@ -31,15 +31,10 @@
 </account-movements-list>
 
 <div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
-
-<div text-center style="width: 100%;">
-  <button (click)="showAlert = !showAlert" class="bml-button bml-button-primary">Press here</button>
+<div full-width text-center auto-height>
+    <button (click)="showError()" class="bml-button bml-button-primary">Press Here for Error</button>
 </div>
-<custom-alert
-  [icon]="iconPath"
-  [text]="message"
-  [buttonText]="buttonText"
-  [showAlert]="showAlert"
-></custom-alert>
-
+<div full-width text-center auto-height>
+    <button (click)="showSuccess()" class="bml-button bml-button-primary">Press Here for Success</button>
+</div>
 </div>

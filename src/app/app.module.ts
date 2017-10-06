@@ -1,7 +1,7 @@
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule, LOCALE_ID } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import {appRoutes, MODAL_COMPONENTS, PAGE_COMPONENTS} from './app.routing';
 import {OnsenModule} from 'ngx-onsenui';
@@ -14,7 +14,6 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {APP_PROVIDERS} from "./providers/app.providers";
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -29,6 +28,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     // Angular core Modules
+    BootstrapModalModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,

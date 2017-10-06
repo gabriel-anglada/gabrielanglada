@@ -5,7 +5,6 @@ import {Routes} from '@angular/router';
 import {OnsenUIPageComponent} from './pages/onsen-ui/onsen-ui.component';
 import {FlexBoxTestsPageComponent} from './pages/flexbox-tests/flexbox-tests.component';
 import {CardsPageComponent} from './pages/cards/cards.component';
-import { CustomAlertWithIcon } from './components/custom-alert-icon-text-button/custom-alert-icon-text-button.component';
 import {NotificationsPageComponent} from './pages/notifications/notifications.component';
 import { GlobalPosComponent } from './pages/global-pos/global-pos.component';
 import { ComponentLibrary } from './components/componet-library/component-library.component';
@@ -19,6 +18,8 @@ import {BizumComponent} from './pages/bizum/bizum.component';
 import {BizumNotActivatedComponent} from './pages/bizum/not_activated/not_activated.component';
 import {BizumActivateComponent} from './pages/bizum/activate/activate.component';
 import {BizumMainComponent} from './pages/bizum/main/main.component';
+import { ErrorAlert} from './components/dialogs/alerts/errorAlert/errorAlert.component';
+import { SuccessAlert} from './components/dialogs/alerts/successAlert/successAlert.component';
 
 export const appRoutes: Routes = [
   { path: 'account', component: AccountPageComponent },
@@ -65,7 +66,8 @@ export const MODAL_COMPONENTS = [
   CardBlue,
   CardBlueSoft,
   CardMovementLine,
-  CustomAlertWithIcon,
   TagDarkBlue,
   TagPurple,
+  ErrorAlert,
+  SuccessAlert
 ];

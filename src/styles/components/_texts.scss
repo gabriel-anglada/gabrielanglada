@@ -47,19 +47,23 @@ small, .small {
 .tiny {
   @include tiny();
 }
-/// Apply tiny class
+/// Apply number-x-big class
+.number-x-big {
+  @include number-x-big();
+}
+/// Apply number-big class
 .number-big {
   @include number-big();
 }
-/// Apply tiny class
+/// Apply number-medium class
 .number-medium {
   @include number-medium();
 }
-/// Apply tiny class
+/// Apply number-small class
 .number-small {
   @include number-small();
 }
-/// Apply tiny class
+/// Apply number-tiny class
 .number-tiny {
   @include number-tiny();
 }

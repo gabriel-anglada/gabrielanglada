@@ -1,7 +1,14 @@
-/* class tag overrides some styles notification class from onsenUI*/
-.bml-tag {
-  font-size: 12px;
-  font-weight: 500;
-  height: 25px;
-  padding: 3px 10px;
+@import "../mixins_functions/texts";
+
+tag {
+  width: fit-content;
+  .tag-text{
+    height: 25px;
+    border-radius: 30px;
+    text-align: center;
+    white-space:nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    @include small()
+  }
 }

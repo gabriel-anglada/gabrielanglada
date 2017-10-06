@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ErrorAlert } from '../dialogs/alerts/errorAlert/errorAlert.component';
-import { SuccessAlert } from '../dialogs/alerts/successAlert/successAlert.component';
+import { ErrorAlertComponent } from '../dialogs/alerts/errorAlert/errorAlert.component';
+import { SuccessAlertComponent } from '../dialogs/alerts/successAlert/successAlert.component';
 import { DialogService } from '../../services/custom-dialog-service.service';
 
 @Component({
@@ -40,19 +40,15 @@ export class ComponentLibrary {
   ];
 
   showError() {
-    let disposable = this.dialogService.addErrorDialog(ErrorAlert, {
+    this.dialogService.addErrorDialog(ErrorAlertComponent, {
       message: "Error al transferir",
-      labelButton: "De acuerdo" })
-      .subscribe((isConfirmed) => {
-        //dialog result
-      });
+      labelButton: "De acuerdo"
+    });
   }
   showSuccess() {
-    let disposable = this.dialogService.addSuccessDialog(SuccessAlert, {
+    this.dialogService.addSuccessDialog(SuccessAlertComponent, {
       message: "Transferencia exitosa",
-      labelButton: "De acuerdo" })
-      .subscribe((isConfirmed) => {
-        //dialog result
-      });
+      labelButton: "De acuerdo"
+    });
   }
 }

@@ -44,22 +44,26 @@
 @mixin label() {
   font-family: Montserrat !important;
   font-size: 12px !important;
-  line-height: 2.0;
   color: color(steel);
 }
 
 @mixin small() {
   font-family: Montserrat !important;
   font-size: 12px !important;
-  line-height: 2.0;
   color: color(black);
 }
 
 @mixin tiny() {
   font-family: Montserrat !important;
   font-size: 10px !important;
-  line-height: 2.0;
   color: color(steel);
+}
+
+@mixin number-x-big() {
+  font-family: Montserrat !important;
+  font-size: 40px !important;
+  font-weight: 500;
+  color: color(white);
 }
 
 @mixin number-big() {

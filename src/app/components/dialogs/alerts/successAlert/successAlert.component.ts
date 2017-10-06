@@ -8,12 +8,13 @@ import { DialogService } from '../../../../services/custom-dialog-service.servic
   templateUrl: 'successAlert.component.html',
   styleUrls:[ './successAlert.component.scss']
 })
-export class SuccessAlert extends DialogComponent<ConfirmModel, boolean> implements OnInit, ConfirmModel {
+export class SuccessAlertComponent extends DialogComponent<ConfirmModel, boolean> implements OnInit, ConfirmModel {
   message: string;
   labelButton: string;
 
   constructor(dialogService: DialogService) {
     super(dialogService);
-    }
+  }
+
   ngOnInit() {}
 }

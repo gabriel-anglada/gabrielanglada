@@ -1,34 +1,59 @@
 {
+	"modal": {
+		"search_movements": {
+			"button": {
+				"submit": "Cargar"
+			},
+			"label": {
+				"from": "Desde:",
+				"to": "Hasta:"
+			},
+			"placeholder": {
+				"from": "DD/MM/YYYY",
+				"to": "DD/MM/YYYY"
+			},
+			"title": "Buscar movimientos"
+		}
+	},
 	"page": {
 		"account": {
 			"button": {
 				"search_movements": "Buscar movimientos"
 			}
 		},
+		"account_info": {
+			"button": {
+				"debits": "Domiciliaciones",
+				"periodic_orders": "Órdenes periódicas"
+			},
+			"label": {
+				"disposal_form": "Forma de disposición:",
+				"holder": "Titular:",
+				"last_operation_date": "Fecha última operación:",
+				"opening_date": "Fecha apertura:"
+			},
+			"text": {
+				"available": "disponible",
+				"balance": "saldo",
+				"interes_%amount%": "Interés: {{ amount }}%"
+			}
+		},
 		"bizum_activate": {
 			"button": {
 				"submit": "Siguiente"
 			},
-			"form": {
-				"accepted": {
-					"label": "He leído y aceptado los <span class='primary'>términos y condiciones</span>"
-				},
-				"account": {
-					"label": "Cuenta",
-					"placeholder": "Selecciona la cuenta"
-				},
-				"alias": {
-					"label": "Alias",
-					"placeholder": "Selecciona tu alias para la cuenta"
-				},
-				"phone": {
-					"label": "Teléfono",
-					"placeholder": "Introduce tu teléfono"
-				}
+			"label": {
+				"accepted": "He leído y acepto los <span primary>términos y condiciones</span>",
+				"account": "Cuenta",
+				"alias": "Alias",
+				"phone": "Teléfono"
 			},
-			"title": {
-				"activate": "Activar Bizum"
-			}
+			"placeholder": {
+				"account": "Selecciona una cuenta",
+				"alias": "Elige un alias",
+				"phone": "Introduce tu teléfono"
+			},
+			"title": "Activar Bizum"
 		},
 		"bizum_main": {
 			"button": {
@@ -46,6 +71,31 @@
 			},
 			"text": "Bizum es un servicio cómodo y seguro de pagar y cobrar a tus amigos desde tu teléfono móvil. Sólo tenéis que estar dados de alta en Bizum. Es un servicio gratuito.",
 			"title": "Bizum, con Banco Mediolamun, es más Bizum"
+		},
+		"cards": {
+			"label": {
+				"balance": "Balance:",
+				"card_number": "Número de tarjeta:",
+				"holder": "Titular:"
+			},
+			"text": {
+				"available": "disnible",
+				"credit_limit_%amount%": "Crédito disponible: {{ amount }}",
+				"spent": "gastado"
+			},
+			"title": {
+				"last_movements": "Últimos movimientos"
+			}
+		},
+		"global_pos": {
+			"button": {
+				"retirement": "Jubilación"
+			},
+			"label": {
+				"financing_%amount%": "Financiación: {{ amount }}",
+				"investment_%amount%": "Inversión: {{ amount }}"
+			},
+			"title": "Posición global"
 		}
 	}
 }

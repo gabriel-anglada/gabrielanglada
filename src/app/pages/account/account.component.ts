@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit,ViewEncapsulation } from '@angular/core';
 import {ModalFactory} from 'ngx-onsenui';
-import {SearchMovesModalComponent} from '../../components/modals/search-moves/search-moves-modal.component';
+import {SearchMovesModalComponent} from '../../modals/search-moves/search-moves-modal.component';
 
 @Component({
   selector: 'ons-page[account]',

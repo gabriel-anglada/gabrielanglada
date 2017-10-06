@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GlobalPosComponent {
     locale: string;
-    title = "Posición Global";
     total = 120456.03;
     finance = 20456.03;
-    invest = 34689.02;
-    unica = 124673.89;
-    freedom = 124673.89;
+    investment = 34689.02;
 }

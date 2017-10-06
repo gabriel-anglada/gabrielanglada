@@ -1,0 +1,24 @@
+<ons-modal #modal class="bml-modal">
+  <div h-align-right>
+    <span class="bml-icon icon-big bml-icon-close primary" (click)="onClose(modal)"></span>
+  </div>
+
+  <h2 col no-margin padding ><span margin-right class="bml-icon bml-icon-glass primary"></span> {{ 'modal.search_movements.title' | translate }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate padding-bottom half-padding-h h-align-center>
+    <div row>
+      <div col no-padding>
+        <bml-input type="date" formControlName="fromDate" [placeholder]="'modal.search_movements.placeholder.from' | translate" [label]="'modal.search_movements.label.from' | translate"></bml-input>
+      </div>
+
+      <div col no-padding>
+        <bml-input type="date" formControlName="toDate" [placeholder]="'modal.search_movements.placeholder.to' | translate" [label]="'modal.search_movements.label.to' | translate"></bml-input>
+      </div>
+    </div>
+
+    <button double-margin-v
+            type="submit"
+            [disabled]="form.invalid"
+            class="bml-button bml-button-primary">{{ 'modal.search_movements.button.submit' | translate }}</button>
+  </form>
+</ons-modal>

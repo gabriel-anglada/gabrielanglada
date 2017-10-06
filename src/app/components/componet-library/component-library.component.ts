@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DialogService } from "ng2-bootstrap-modal";
+import { ErrorAlert } from '../dialogs/alerts/errorAlert/errorAlert.component';
 
 @Component({
   selector: 'ons-page[component-library]',
@@ -9,7 +11,9 @@ import { Component } from '@angular/core';
 })
 
 export class ComponentLibrary {
-  private showAlert = false;
+
+  constructor(private dialogService: DialogService) {}
+
   //card component
   private cardNumber = "1234 1234 1234 1234";
   private cardAmount = 1234.56;
@@ -34,8 +38,7 @@ export class ComponentLibrary {
     {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: "positive" }
   ];
 
-  //alert
-  private iconPath = "../../assets/confirmed.svg";
-  private message = "La transferencia se ha realizado con éxito";
-  private buttonText = "De acuerdo";
+showConfirm() {
+
+}
 }

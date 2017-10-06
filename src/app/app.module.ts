@@ -14,6 +14,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {APP_PROVIDERS} from "./providers/app.providers";
+import {APP_PIPES} from "./pipes/app.pipes";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,6 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     PAGE_COMPONENTS,
     MODAL_COMPONENTS,
+    APP_PIPES,
     GlobalPositionAccountsComponent,
     GlobalPosCardsComponent
   ],

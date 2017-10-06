@@ -1,34 +1,59 @@
 {
+	"modal": {
+		"search_movements": {
+			"button": {
+				"submit": ""
+			},
+			"label": {
+				"from": "",
+				"to": ""
+			},
+			"placeholder": {
+				"from": "",
+				"to": ""
+			},
+			"title": ""
+		}
+	},
 	"page": {
 		"account": {
 			"button": {
-				"search_movements": "Search movements"
+				"search_movements": ""
+			}
+		},
+		"account_info": {
+			"button": {
+				"debits": "",
+				"periodic_orders": ""
+			},
+			"label": {
+				"disposal_form": "",
+				"holder": "",
+				"last_operation_date": "",
+				"opening_date": ""
+			},
+			"text": {
+				"available": "",
+				"balance": "",
+				"interes_%amount%": ""
 			}
 		},
 		"bizum_activate": {
 			"button": {
 				"submit": ""
 			},
-			"form": {
-				"accepted": {
-					"label": ""
-				},
-				"account": {
-					"label": "",
-					"placeholder": ""
-				},
-				"alias": {
-					"label": "",
-					"placeholder": ""
-				},
-				"phone": {
-					"label": "",
-					"placeholder": ""
-				}
+			"label": {
+				"accepted": "",
+				"account": "",
+				"alias": "",
+				"phone": ""
 			},
-			"title": {
-				"activate": ""
-			}
+			"placeholder": {
+				"account": "",
+				"alias": "",
+				"phone": ""
+			},
+			"title": ""
 		},
 		"bizum_main": {
 			"button": {
@@ -45,6 +70,31 @@
 				"not_now": ""
 			},
 			"text": "",
+			"title": ""
+		},
+		"cards": {
+			"label": {
+				"balance": "",
+				"card_number": "",
+				"holder": ""
+			},
+			"text": {
+				"available": "",
+				"credit_limit_%amount%": "",
+				"spent": ""
+			},
+			"title": {
+				"last_movements": ""
+			}
+		},
+		"global_pos": {
+			"button": {
+				"retirement": ""
+			},
+			"label": {
+				"financing_%amount%": "",
+				"investment_%amount%": ""
+			},
 			"title": ""
 		}
 	}

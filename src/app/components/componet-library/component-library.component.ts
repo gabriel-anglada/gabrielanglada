@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ErrorAlert } from '../dialogs/alerts/errorAlert/errorAlert.component';
+import { SuccessAlert } from '../dialogs/alerts/successAlert/successAlert.component';
+import { DialogService } from '../../services/custom-dialog-service.service';
 
 @Component({
   selector: 'ons-page[component-library]',
@@ -9,7 +12,9 @@ import { Component } from '@angular/core';
 })
 
 export class ComponentLibrary {
-  private showAlert = false;
+  constructor(private dialogService: DialogService){
+
+  }
   //card component
   private cardNumber = "1234 1234 1234 1234";
   private cardAmount = 1234.56;
@@ -27,14 +32,27 @@ export class ComponentLibrary {
 
   //account lines
   private accounts = [
-    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 },
-    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: -12.56, total: 12867 },
-    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 },
-    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: -12.56, total: 12867 },
-    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867 }
+    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: "positive" },
+    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: -12.56, total: 12867, type: "negative" },
+    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: "positive" },
+    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: -12.56, total: 12867, type: "negative" },
+    {date: "3 May", name: "Suministros Luz - Endesa S.L. Corporation", balance: 12.56, total: 12867, type: "positive" }
   ];
 
-  alert() {
-    this.showAlert = this.showAlert ? false : true;
+  showError() {
+    let disposable = this.dialogService.addErrorDialog(ErrorAlert, {
+      message: "Error al transferir",
+      labelButton: "De acuerdo" })
+      .subscribe((isConfirmed) => {
+        //dialog result
+      });
+  }
+  showSuccess() {
+    let disposable = this.dialogService.addSuccessDialog(SuccessAlert, {
+      message: "Transferencia exitosa",
+      labelButton: "De acuerdo" })
+      .subscribe((isConfirmed) => {
+        //dialog result
+      });
   }
 }

@@ -1,22 +1,23 @@
-<div class="content" style="height: 100%; display: block;">
-<card-blue
+<div class="content">
+
+  <card-blue
   [cardNumber]="cardNumber"
   [cardAmount]="cardAmount">
 </card-blue>
 
 <card-blue-soft
-  [cardNumber]="cardNumber"
-  [cardAmount]="cardAmount">
+[cardNumber]="cardNumber"
+[cardAmount]="cardAmount">
 </card-blue-soft>
 
 <tag-dark-blue
-  [title]="tagTitle"
-  [amount]="tagAmount">
+[title]="tagTitle"
+[amount]="tagAmount">
 </tag-dark-blue>
 
 <tag-purple
-  [title]="tagTitle"
-  [amount]="tagAmount">
+[title]="tagTitle"
+[amount]="tagAmount">
 </tag-purple>
 
 <ul class="exp-list-all">
@@ -26,18 +27,14 @@
 <div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
 
 <account-movements-list
-  [accountMovements]="accounts">
+[accountMovements]="accounts">
 </account-movements-list>
 
 <div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
-
-<div text-center style="width: 100%;">
-  <button (click)="alert()" class="bml-button bml-button-primary">Press here</button>
+<div full-width text-center auto-height>
+    <button (click)="showError()" class="bml-button bml-button-primary">Press Here for Error</button>
 </div>
-<div class="alert" [hidden]="!showAlert" (click)="alert()"></div>
-<div double-padding text-center class="alert-content" [hidden]="!showAlert">
-  <img src="../../assets/confirmed.svg">
-  <p>La transferencia se ha realizado con éxito</p>
-  <button (click)="alert()" class="bml-button bml-button-primary">Press here</button>
+<div full-width text-center auto-height>
+    <button (click)="showSuccess()" class="bml-button bml-button-primary">Press Here for Success</button>
 </div>
 </div>

@@ -15,10 +15,5 @@ export class SuccessAlert extends DialogComponent<ConfirmModel, boolean> impleme
   constructor(dialogService: DialogService) {
     super(dialogService);
     }
-
-  confirm() {
-    this.result = true;
-    this.close();
-  }
   ngOnInit() {}
 }

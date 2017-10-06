@@ -1,8 +1,7 @@
 <div center-middle full-height text-center>
   <div text-center bg-white double-padding border-radius-normal class="alert-container">
-    <!-- <img src="{{iconPath}}" width="50%"> -->
     <span class="bml-icon bml-icon-alert-wrong icon-xxx-big" danger></span>
     <p padding text-center>{{message}}</p>
-    <button (click)="confirm()" class="bml-button bml-button-primary">{{labelButton}}</button>
+    <button (click)="close()" class="bml-button bml-button-primary">{{labelButton}}</button>
   </div>
 </div>

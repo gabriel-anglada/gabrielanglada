@@ -1,12 +1,12 @@
 <div class="global-pos-container">
   <div class="account-container">
     <div style="width: 100%;text-align: center">
-      <p class="global-title">{{ 'page.global_pos.title' | translate }}</p>
-      <p class="global-total">{{ total | currency:'EUR': true:'1.2-2'}}</p>
+      <small class="white font-medium">{{ 'page.global_pos.title' | translate }}</small>
+      <p class="number-x-big">{{ total | currency:'EUR': true:'1.2-2'}}</p>
     </div>
-    <div class="top-container">
-      <p class="global-finance">{{ 'page.global_pos.label.financing_%amount%' | translate:{amount: finance | currency:'EUR': true:'1.2-2'} }}</p>
-      <p class="global-invest">{{ 'page.global_pos.label.investment_%amount%' | translate:{amount: investment | currency:'EUR': true:'1.2-2'} }}</p>
+    <div row margin-v>
+      <tag col half-margin-right>{{ 'page.global_pos.label.financing_%amount%' | translate:{amount: finance | currency:'EUR': true:'1.2-2'} }}</tag>
+      <tag col half-margin-left bg-color="bg-primary-three">{{ 'page.global_pos.label.investment_%amount%' | translate:{amount: investment | currency:'EUR': true:'1.2-2'} }}</tag>
     </div>
   </div>
   <global-position-accounts></global-position-accounts>

@@ -3,18 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
-import {appRoutes, MODAL_COMPONENTS, PAGE_COMPONENTS} from './app.routing';
+import {appRoutes, PAGE_COMPONENTS} from './app.routing';
 import {OnsenModule} from 'ngx-onsenui';
 import {RouterModule} from '@angular/router';
-import { GlobalPositionAccountsComponent } from './components/global-position-accounts/global-position-accounts.component';
-import { GlobalPosCardsComponent } from './components/global-position-cards/global-position-cards.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormElementsModule} from './components/form-elements/form-elements.module';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 import {APP_PROVIDERS} from './providers/app.providers';
 import {APP_PIPES} from './pipes/app.pipes';
+import {APP_COMPONENTS} from './components/app.components';
+import {MODAL_COMPONENTS} from './modals/app.modals';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,10 +25,9 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     PAGE_COMPONENTS,
+    APP_COMPONENTS,
     MODAL_COMPONENTS,
-    APP_PIPES,
-    GlobalPositionAccountsComponent,
-    GlobalPosCardsComponent
+    APP_PIPES
   ],
   imports: [
     // Angular core Modules
@@ -56,6 +56,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   entryComponents: [
     PAGE_COMPONENTS,
+    APP_COMPONENTS,
     MODAL_COMPONENTS
   ],
   providers: [

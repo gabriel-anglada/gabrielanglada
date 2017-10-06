@@ -18,14 +18,16 @@ import {InputComponent} from './input.component';
     }]
 })
 export class CheckboxComponent extends InputComponent {
-  constructor() {
-    super();
+
+  private checked: boolean;
+
+  public writeValue(val: any) {
+    this.checked = !!val;
   }
 
   // change events from the input
   public onChange(event) {
-    console.log(event.target.checked);
-    this.data = this.value = event.target.checked;
+    this.data = this.checked = event.target.checked;
     // update the form
     this.propagateChange(this.data);
   }

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'ons-page[bizum-activate]',
@@ -24,12 +24,12 @@ export class BizumActivateComponent implements AfterViewInit, OnInit {
       account: '1',
       phone: ['', Validators.required],
       alias: ['', Validators.required],
-      accepted: [true, Validators.requiredTrue]
+      accepted: [false, Validators.requiredTrue]
     });
   }
 
   onSubmit() {
-    console.log(this.form);
+    console.log(this.form.controls.radio);
   }
 
   ngAfterViewInit() {

@@ -4,7 +4,7 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {InputComponent} from './input.component';
 import {SelectComponent} from './select.component';
 import {CheckboxComponent} from './checkbox.component';
-
+import {RadioButtonComponent, RadioGroupComponent} from './radio.component';
 
 @NgModule({
   imports: [
@@ -14,12 +14,16 @@ import {CheckboxComponent} from './checkbox.component';
   exports: [
     InputComponent,
     SelectComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    RadioGroupComponent,
+    RadioButtonComponent
   ],
   declarations: [
     InputComponent,
     SelectComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    RadioGroupComponent,
+    RadioButtonComponent
   ],
   providers: [],
   schemas: [

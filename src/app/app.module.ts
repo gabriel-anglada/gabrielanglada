@@ -28,7 +28,6 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     // Angular core Modules
-    BootstrapModalModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -49,7 +48,8 @@ export function createTranslateLoader(http: HttpClient) {
     // Custom Modules
     FormElementsModule,
     // Third Party Modules
-    OnsenModule
+    OnsenModule,
+    BootstrapModalModule
   ],
   entryComponents: [
     PAGE_COMPONENTS,

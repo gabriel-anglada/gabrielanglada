@@ -1,5 +1,5 @@
 import { Injectable, Type } from "@angular/core";
-import { DialogService, DialogComponent, DialogOptions } from "ng2-bootstrap-modal";
+import { DialogService as BaseDialogService, DialogComponent, DialogOptions } from "ng2-bootstrap-modal";
 
 import { Observable } from "rxjs";
 
@@ -8,7 +8,7 @@ export class DialogServiceConfig {
 }
 
 @Injectable()
-export class CustomDialogService extends DialogService {
+export class DialogService extends BaseDialogService {
   addSuccessDialog<T, T1>(component:Type<DialogComponent<T, T1>>, data?:T, options?:DialogOptions): Observable<T1> {
     return this.addDialog(component, data, options);
   }

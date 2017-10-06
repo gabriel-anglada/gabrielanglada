@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { ErrorAlert } from '../dialogs/alerts/errorAlert/errorAlert.component';
 import { SuccessAlert } from '../dialogs/alerts/successAlert/successAlert.component';
-import { DialogService } from "ng2-bootstrap-modal";
-import { CustomDialogService } from '../../services/custom-dialog-service.service';
+import { DialogService } from '../../services/custom-dialog-service.service';
 
 @Component({
   selector: 'ons-page[component-library]',
@@ -13,7 +12,7 @@ import { CustomDialogService } from '../../services/custom-dialog-service.servic
 })
 
 export class ComponentLibrary {
-  constructor(private dialogService: CustomDialogService){
+  constructor(private dialogService: DialogService){
 
   }
   //card component

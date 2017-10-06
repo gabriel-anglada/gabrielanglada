@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmModel } from '../confirm-model.interface';
 import { DialogComponent } from "ng2-bootstrap-modal";
-import { CustomDialogService } from '../../../../services/custom-dialog-service.service';
+import { DialogService } from '../../../../services/custom-dialog-service.service';
 
 @Component({
   selector: 'success-alert',
@@ -12,7 +12,7 @@ export class SuccessAlert extends DialogComponent<ConfirmModel, boolean> impleme
   message: string;
   labelButton: string;
 
-  constructor(dialogService: CustomDialogService) {
+  constructor(dialogService: DialogService) {
     super(dialogService);
     }
 

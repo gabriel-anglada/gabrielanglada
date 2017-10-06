@@ -32,7 +32,9 @@
 
 <div style="clear: both; height: 1px;background-color: black; margin-top: 10px; margin-bottom: 10px;"></div>
 <div full-width text-center auto-height>
-    <button class="bml-button bml-button-primary">Press Here</button>
+    <button (click)="showError()" class="bml-button bml-button-primary">Press Here for Error</button>
 </div>
-
+<div full-width text-center auto-height>
+    <button (click)="showSuccess()" class="bml-button bml-button-primary">Press Here for Success</button>
+</div>
 </div>

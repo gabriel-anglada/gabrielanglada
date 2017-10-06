@@ -4,11 +4,11 @@ import { DialogComponent } from "ng2-bootstrap-modal";
 import { CustomDialogService } from '../../../../services/custom-dialog-service.service';
 
 @Component({
-  selector: 'error-alert',
-  templateUrl: 'errorAlert.component.html',
-  styleUrls:[ './errorAlert.component.scss']
+  selector: 'success-alert',
+  templateUrl: 'successAlert.component.html',
+  styleUrls:[ './successAlert.component.scss']
 })
-export class ErrorAlert extends DialogComponent<ConfirmModel, boolean> implements OnInit, ConfirmModel {
+export class SuccessAlert extends DialogComponent<ConfirmModel, boolean> implements OnInit, ConfirmModel {
   message: string;
   labelButton: string;
 

@@ -19,6 +19,7 @@ import {BizumNotActivatedComponent} from './pages/bizum/not_activated/not_activa
 import {BizumActivateComponent} from './pages/bizum/activate/activate.component';
 import {BizumMainComponent} from './pages/bizum/main/main.component';
 import { ErrorAlert} from './components/dialogs/alerts/errorAlert/errorAlert.component';
+import { SuccessAlert} from './components/dialogs/alerts/successAlert/successAlert.component';
 
 export const appRoutes: Routes = [
   { path: 'account', component: AccountPageComponent },
@@ -67,5 +68,6 @@ export const MODAL_COMPONENTS = [
   CardMovementLine,
   TagDarkBlue,
   TagPurple,
-  ErrorAlert
+  ErrorAlert,
+  SuccessAlert
 ];

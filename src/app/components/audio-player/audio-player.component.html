@@ -1,13 +1,20 @@
-<div class="audio-container {{ state }}">
-  <div class="audio-unavailable">
-    <h1>Offline</h1>
+<div padding margin-bottom class="audio-container {{ state }} bg-slate-grey">
+  <div class="audio-unavailable" text-center>
+    <h1 margin-bottom>Radio Offline</h1>
+    <mat-spinner  strokeWidth="4"></mat-spinner>
+    <p>Conectando...</p>
   </div>
 
-  <div class="audio-available">
-    <button (click)="togglePlayPause()" [class.paused]="state == 'pause'" class="play-pause-btn"><span class="ga-icon ga-icon-play3"></span></button>
-    <button (click)="toggleMute()" [class.muted]="volume == 0" class="play-pause-btn"><span class="ga-icon ga-icon-volume-high"></span></button>
-    <p>{{ currentTime }}</p>
-    <input type="range" (input)="onVolumeRangeChange($event)" [ngModel]="volume" min="0" max="1" step="0.1"/>
+  <div row class="audio-available">
+    <div col text-center>
+      <button (click)="togglePlayPause()" class="play-pause-btn"><span [class.ga-icon-pause2]="state == 'play'" class="ga-icon ga-icon-play3"></span></button>
+      <p>{{ currentTime }}</p>
+    </div>
+
+    <div col text-center>
+      <mat-slider no-padding [value]="volume" min="0" max="1" step="0.1" vertical></mat-slider><br>
+      <button (click)="toggleMute()" class="mute-btn"><span [class.ga-icon-volume-mute2]="volume == 0" class="ga-icon ga-icon-volume-high"></span></button>
+    </div>
   </div>
 </div>
 

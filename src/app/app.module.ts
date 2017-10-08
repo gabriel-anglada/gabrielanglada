@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {APP_PIPES} from './pipes/app.pipes';
 import {APP_COMPONENTS} from './components/app.components';
 import {AppTranslationModule} from "./app-translation.module";
+import {AppMaterialModule} from "./app-material.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import {AppTranslationModule} from "./app-translation.module";
       //{ enableTracing: true } // <-- debugging purposes only
     ),
     HttpClientModule,
+    // Custom modules
     AppTranslationModule,
+    AppMaterialModule
   ],
   entryComponents: [
     PAGE_COMPONENTS,

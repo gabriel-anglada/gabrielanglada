@@ -1,3 +1,5 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import 'assets/fonts/Icomoon/style.css';
 
 @import "styles/fonts";
@@ -10,4 +12,31 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  /**
+   * @TODO: move this to auido-player component
+   */
+  .mat-slider {
+    min-height: 92px;
+    margin-top: 7px;
+
+    .mat-slider-thumb {
+      background-color: color(pale-grey) !important;
+      &:hover {
+        background-color: color(white) !important;
+      }
+    }
+    .mat-slider-track-fill {
+      background-color: color(silver) !important;
+    }
+  }
+  .mat-spinner {
+    svg {
+      width: 50px !important;
+      height: 50px !important;
+      circle {
+        stroke: color(pale-grey);
+      }
+    }
+  }
 }

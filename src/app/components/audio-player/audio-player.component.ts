@@ -12,7 +12,7 @@ export class AudioComponent implements AfterViewInit{
     @ViewChild('audio') audio: ElementRef;
 
     private _audioElement;
-    private _state: string = 'not_loaded';
+    private _state: string = 'error';
     private _pausePressed: boolean = false;
     private _previousVolume: number = 1;
 
@@ -20,8 +20,8 @@ export class AudioComponent implements AfterViewInit{
     private volume: number = 1;
 
     set state(value: string) {
-        console.log(value);
         this._state = value;
+        console.log(value);
     }
 
     get state() {
@@ -55,9 +55,7 @@ export class AudioComponent implements AfterViewInit{
         this._audioElement.addEventListener('error', event => {
             this.state = 'error';
 
-            setTimeout(() => {
-                this.load();
-            }, 5000);
+            setTimeout(() =>  this.load(), 5000);
         });
         this._audioElement.addEventListener('play', event => {
             this.state = 'play';
@@ -65,14 +63,11 @@ export class AudioComponent implements AfterViewInit{
         this._audioElement.addEventListener('pause', event => {
             this.state = 'pause';
 
-            if(this._pausePressed) {
-                this._pausePressed = false;
-            } else {
-                this.load();
-            }
+            this._pausePressed ? this._pausePressed = false : this.load();
         });
         this._audioElement.addEventListener('canplay', event => {
             this.state = 'loaded';
+
             this.play();
         });
         this._audioElement.addEventListener('volumechange', event => {
@@ -89,11 +84,7 @@ export class AudioComponent implements AfterViewInit{
             this._pausePressed = true;
             this.pause();
         } else {
-            if(this._audioElement.networkState == 3) {
-                this.load();
-            } else {
-                this.play();
-            }
+            this._audioElement.networkState == 3 ? this.load() : this.play();
         }
     }
 
@@ -115,6 +106,6 @@ export class AudioComponent implements AfterViewInit{
     }
 
     onVolumeRangeChange(event) {
-        this.volume = event.target.value;
+        this.volume = event.value;
     }
 }

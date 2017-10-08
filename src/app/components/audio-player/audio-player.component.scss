@@ -2,8 +2,9 @@
 @import "../../../styles/mixins_functions/color";
 
 .audio-container {
-  padding: $paddingDimension;
-  background-color: color(pale-grey);
+  * {
+    color: color(pale-grey);
+  }
 
   .audio-unavailable {
     display: none;
@@ -14,10 +15,46 @@
 
   &.error, &.loading {
     .audio-unavailable {
-      display: flex;
+      display: block;
     }
     .audio-available {
-      display: none;
+      display:   none;
     }
+  }
+
+  .play-pause-btn {
+    padding: 0;
+    span {
+      font-size: 100px;
+    }
+  }
+
+  button {
+
+    &:focus {
+      outline: none;
+    }
+    background: transparent;
+    border: none;
+    &:hover {
+      span {
+        color: color(white) !important;
+      }
+    }
+  }
+
+  .mat-slider-vertical {
+    min-height: 90px;
+    margin-top: 7px;
+  }
+
+  .mute-btn {
+    margin-top: 4px;
+  }
+
+  .mat-spinner {
+    margin: auto;
+    width: 50px !important;
+    height: 50px !important;
   }
 }

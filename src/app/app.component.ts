@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {TranslateProvider} from './providers/translate.provider';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,5 @@ import {TranslateProvider} from './providers/translate.provider';
 })
 export class AppComponent {
 
-  constructor(private translate: TranslateProvider) {}
+  constructor() {}
 }

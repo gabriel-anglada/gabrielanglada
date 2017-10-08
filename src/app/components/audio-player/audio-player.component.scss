@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins_functions/color";
+
+.audio-container {
+  padding: $paddingDimension;
+  background-color: color(pale-grey);
+
+  .audio-unavailable {
+    display: none;
+  }
+  .audio-available {
+    display: flex;
+  }
+
+  &.error, &.loading {
+    .audio-unavailable {
+      display: flex;
+    }
+    .audio-available {
+      display: none;
+    }
+  }
+}

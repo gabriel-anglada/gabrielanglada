@@ -28,9 +28,6 @@
     "@ngx-translate/http-loader": "^2.0.0",
     "core-js": "^2.4.1",
     "ng2-bootstrap-modal": "^1.0.1",
-    "ng2-page-transition": "^1.1.0",
-    "ngx-onsenui": "^4.1.0",
-    "onsenui": "^2.6.0",
     "rxjs": "^5.4.2",
     "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.14"

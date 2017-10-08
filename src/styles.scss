@@ -1,8 +1,13 @@
-@import '../node_modules/onsenui/css/onsenui.css';
-@import '../node_modules/onsenui/css/onsen-css-components.css';
-
-@import 'assets/fonts/bml/style.css';
+@import 'assets/fonts/Icomoon/style.css';
 
 @import "styles/fonts";
 @import "styles/helpers/helpers";
 @import "styles/components/components";
+
+body {
+  background: url(assets/images/barcelona_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

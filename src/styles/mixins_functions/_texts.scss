@@ -4,28 +4,28 @@
   font-family: Montserrat !important;
   font-size: 40px !important;
   font-weight: 500;
-  color: color(white);
+  color: color(black);
 }
 
 @mixin big() {
   font-family: Montserrat !important;
   font-size: 30px !important;
   font-weight: 500;
-  color: color(white);
+  color: color(black);
 }
 
 @mixin title() {
   font-family: Montserrat !important;
   font-size: 24px !important;
   font-weight: 500;
-  color: color(white);
+  color: color(black);
 }
 
 @mixin h1() {
   font-family: Montserrat !important;
   font-size: 20px !important;
   font-weight: 500;
-  color: color(white);
+  color: color(black);
 }
 
 @mixin h2() {
@@ -44,7 +44,7 @@
 @mixin label() {
   font-family: Montserrat !important;
   font-size: 12px !important;
-  color: color(steel);
+  color: color(black);
 }
 
 @mixin small() {
@@ -56,21 +56,21 @@
 @mixin tiny() {
   font-family: Montserrat !important;
   font-size: 10px !important;
-  color: color(steel);
+  color: color(black);
 }
 
 @mixin number-x-big() {
   font-family: Montserrat !important;
   font-size: 40px !important;
   font-weight: 500;
-  color: color(white);
+  color: color(black);
 }
 
 @mixin number-big() {
   font-family: Montserrat !important;
   font-size: 20px !important;
   font-weight: 500;
-  color: color(primary);
+  color: color(black);
 }
 
 @mixin number-medium() {
